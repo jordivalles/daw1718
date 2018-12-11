@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Pràctica 2</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="estil.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <i class="fas fa-wheelchair roda"></i>
+          <a class="navbar-brand" href="#">Travel Services</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Our services
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Bernat</a>
+                  <a class="dropdown-item" href="#">Aprova'm</a>
+                  <a class="dropdown-item" href="#">Siusplau</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Flights</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Hotels</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <!--span class="glyphicon glyphicon-search"></span-->
+              <input class="form-control mr-sm-2" type="search" placeholder="Write your search here" aria-label="Search">
+              <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+    </header>
+    
+    <main>
+        
+        <section class="imatges">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active imatge" style="background-image: url(ciutat.jpg);">
+                  <!--img class="d-block w-100" src="ciutat.jpg" alt="First slide"-->
+                </div>
+                <div class="carousel-item imatge" style="background-image: url(muntanya.jpg);">
+                  <!--img class="d-block w-100" src="muntanya.jpg" alt="Second slide"-->
+                </div>
+                <div class="carousel-item imatge" style="background-image: url(platja.png);">
+                  <!--img class="d-block w-100" src="platja.png" alt="Third slide"-->
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+        </section>
+    
+        <section class="our">
+            <div class="services">
+                <h1>Our services</h1>
+                <p>Tot el camp, és un clam, som la gent blaugrana tant se val d'on venim si del sud o del nord, ara estem d'acord estem d'acord, una bandera ens agermana.</p>
+                <p>Blaugrana al vent un crit valent tenim un nom que el sap tothom, Barça, Barça, BARÇA.</p>
+            </div>
+            <div class="container opcions">
+              <div class="row">
+                <div class="col">
+                    <span class="caixa"><i class="fas fa-plane"></i></span>
+                    <h2>Low-cost Flights</h2>
+                    <p>Choose this option and get the chippiest prices. Max quality garanted.</p>
+                </div>
+                <div class="col">
+                    <span class="caixa"><i class="fas fa-plane"></i></span>
+                    <h2>Ferries and Cruises</h2>
+                    <p>Choose this option and get the chippiest prices. Max quality garanted.</p>
+                </div>
+                <div class="col">
+                    <span class="caixa"><i class="fas fa-plane"></i></span>
+                    <h2>Secure payment</h2>
+                    <p>Choose this option and get the chippiest prices. Max quality garanted.</p>
+                </div>
+              </div>
+            </div>
+        </section>
+    
+    
+    </main>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+
+</html>

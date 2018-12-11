@@ -1,0 +1,81 @@
+html{
+    background-color: aquamarine;
+    font-size: 16px;
+    font-family: fantasy;
+}
+
+header{
+    background-color: aqua;
+}
+
+footer{
+    background-color: red;
+}
+
+body{
+    font-size: 16px;
+}
+
+main{
+    width: 800px;
+    height: 600px;
+    //height: 1142px;
+    border: 1px solid black;
+    padding: 20px 10px 0px 0px;
+    margin: 20px;
+    background-color: blue;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    /*background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;*/
+}
+
+div{
+    font-size: 2em;
+}
+
+.rodones{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: lime;
+    border-radius: 50%;
+    -webkit-box-shadow: 11px 10px 30px 8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 11px 10px 30px 8px rgba(0,0,0,0.75);
+    box-shadow: 11px 10px 30px 8px rgba(0,0,0,0.75);
+    transition-duration: 5s;
+}
+
+img:hover{
+    transform: rotate(-360deg*30);
+}
+
+.triangle{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-top: 100px solid transparent;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid lime;
+}
+
+.capses{
+    display: block;
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    border: 1px solid black;
+    box-sizing: content-box;
+    //el content-box vol dir que si el width és 200, el border,
+    //padding i margin estaràn dins els 200. En canvi, amb border-box nomes tindrà en compte el padding i border
+}
+
+//1em: em és la mida de la font base en aquell punt
+//si la font size del body és 20px, 1em seran 20px
+//per defecte, 1em=16px
+
+//vw i vh, és l'amplada i llargada respecte a la que tens, és a dir, funciona respecte a la finestra que s'obre
+
+//selectors: div>li vol dir que afecta als li que tinguin com a pare un div // li+li vol dir que afecta als li que tenen un germà anterior li (és a dir,precedit per un li) // li~li vol dir que afecta als germans que tenen li, i poden estar més enrere, no cal que estiguin precedits

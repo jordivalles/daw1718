@@ -1,0 +1,50 @@
+body{
+    header{
+        nav{
+            .roda{
+                display: block;
+                margin-right: 5px;
+                color: white;
+            }
+        }
+    }
+    
+    main{
+        
+        .imatges{
+            .imatge{
+                height: 500px;
+                width: 100;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+        
+        .our{
+            .services{
+                text-align: center;
+                h1{
+                    display: block;
+                    position: relative;
+                    padding: 10px;
+                    &:after{
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        bottom: 0%;
+                        right: 50%;
+                        transform: translateX(50%);
+                        width: 5%;
+                        height: 3px;
+                        background-color: orange;
+                    }
+                }
+                
+            }
+            .opcions{
+                background-color: #eeee;
+                text-align: center;
+            }
+        }
+    }
+}

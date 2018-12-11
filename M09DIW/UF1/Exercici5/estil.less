@@ -1,0 +1,21 @@
+div{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    background-color: lime;
+    
+    div{
+        display: none;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+    &:hover{
+        background-color: lime;
+        &>div{
+            display: block;
+        }
+    }
+}

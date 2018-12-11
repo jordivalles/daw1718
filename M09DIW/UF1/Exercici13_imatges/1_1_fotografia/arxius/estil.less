@@ -1,0 +1,40 @@
+body{
+    background-image: url(imatges/fons.jpg);
+    background-repeat: no-repeat;
+    //background-size: cover;
+    
+    p{
+        margin: 10px;
+    }
+    
+    .foto{
+        float: left;
+        padding: 30px;
+        transform: rotate(5deg);
+        position: relative;
+        //-webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.75);
+        //-moz-box-shadow:    4px 4px 5px 0px rgba(50, 50, 50, 0.75);
+        //box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.75);
+        img{
+            border: 5px solid white;
+        }
+        &:after{
+            display: block;
+            content: "";
+            position: absolute;
+            background-image: url(imatges/celo.png);
+            background-repeat: no-repeat;
+            height: 75px;
+            width: 50%;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%,-25%) rotate(-25deg);
+        }
+    }
+    
+    .right{
+        float: right;
+        margin: 40px 30px;
+    }
+    
+}

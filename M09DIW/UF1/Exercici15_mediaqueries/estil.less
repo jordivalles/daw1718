@@ -1,0 +1,106 @@
+h2{
+    font-size: 1.7rem;
+    font-weight: bolder;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+header{
+    ul{
+        display: flex;
+        justify-content: center;
+        li{
+            display: block;
+            padding: 10px;
+        }
+    }
+}
+
+#maincontainer{
+    display: flex;
+    
+    #category_navigation{
+        width: 10%;
+    }
+    #articles{
+        width: 70%;
+    }
+    #news{
+        width: 20%;
+    }
+    #category_navigation{
+        ul{
+            padding-left: 15px;
+        }
+        li ul{
+            display: none;
+        }
+        li.opened ul{
+            display: block;
+        }
+    }
+    
+    #articles{
+        div{
+            display: flex;
+            
+            article{
+                width: 33.3%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                border: 1px solid #444;
+                background-color: #ddd;
+                margin: 15px;
+                h3{
+                    font-size: 1.3rem;
+                }
+                main{
+                    flex-grow: 1;
+                    padding: 15px;
+                    font-size: 0.8rem;
+                }
+                figure{
+                    float: left;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                }
+                footer{
+                    padding: 15px;
+                    display: block;
+                    background-color: #444;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    #news{
+        article{
+            border: 1px solid black;
+            background-color: azure;
+            padding: 5px;
+            margin: 10px;
+        }
+        figure{
+            float: left;
+            margin: 10px;
+        }
+    }
+}
+//---------
+@media(max-width: 1150px){
+    #maincontainer{
+        #category_navigation{
+            display: none;
+        }
+        #articles{
+            width: 60%;
+            img{
+                width: 150px;
+            }
+        }
+        #news{
+            width: 40%;
+        }
+    }
+}

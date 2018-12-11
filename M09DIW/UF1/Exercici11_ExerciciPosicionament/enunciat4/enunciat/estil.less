@@ -1,0 +1,80 @@
+@margin: 10px;
+
+main{
+    padding: 20px;
+}
+
+.contenidor{
+    
+    width: 100%;
+    height: 100%;
+    background-color: lime;
+    //margin: @margin;
+    display: flex;
+    position: relative;
+    //justify-content: space-around;
+    align-items: center;
+    border: 3px solid black;
+    box-sizing: border-box;
+    
+    .corner-top-left{
+        display: block;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        margin: @margin;
+        transform: translate(-25%,-25%) rotate(90deg);
+    }
+    
+    .corner-bottom-left{
+        display: block;
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        margin: @margin;
+        transform: translate(-25%,25%);
+    }
+    
+    .corner-top-right{
+        display: block;
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        margin: @margin;
+        transform: translate(25%,-25%) rotate(180deg);
+    }
+    
+    .corner-bottom-right{
+        display: block;
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        margin: @margin;
+        transform: translate(25%,25%) rotate(-90deg);
+    }
+    
+    .esquerra{
+        width: 30%;
+        background-color: red;
+    }
+    
+    .centre{
+        width: 40%;
+        padding: 60px 20px;
+        background-color: aqua;
+    }
+    
+    .dreta{
+        width: 30%;
+        background-color: blue;
+    }
+    
+    .imatge{
+        background-color: chocolate;
+        width: 200px;
+        height: 50px;
+        display: block;
+        margin: 0 auto;
+    }
+    
+}
