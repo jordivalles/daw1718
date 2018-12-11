@@ -6,7 +6,7 @@ class ModelConsultes extends CI_Model{
 	/***********Login*************/
 	
 	public function checkUsuari($data){
-		$condition = "nom =" . "'" . $data['nom'] . "' AND " . "password =" . "'" . $data['pw'] . "'";
+		$condition = "mail =" . "'" . $data['mail'] . "' AND " . "password =" . "'" . $data['pw'] . "'";
 		$this->db->select('*');
 		$this->db->from('usuari');
 		$this->db->where($condition);
@@ -33,7 +33,7 @@ class ModelConsultes extends CI_Model{
 	public function checkRepetit($data){
 		$condition = "mail =" . "'" . $data['mail'] . "'";
 		$this->db->select('*');
-		$this->db->from('artistes');
+		$this->db->from('usuari');
 		$this->db->where($condition);
 		$this->db->limit(1);
 		$query = $this->db->get();
@@ -47,9 +47,9 @@ class ModelConsultes extends CI_Model{
 	
 	public function registrar($data){
 		$this->db->set('mail', $data['mail']);
+		$this->db->set('nom', $data['nom']);
 		$this->db->set('password', $data['pw1']);
-		$this->db->set('nomArtistic', $data['nom']);
-		$this->db->insert('artistes');
+		$this->db->insert('usuari');
 	}
 	
 	
@@ -66,9 +66,20 @@ class ModelConsultes extends CI_Model{
 	/*******Menú Admin*************/
 	
     public function getCursos(){
-		$this->db->select('*');
-		$this->db->from('curs');
+		$this->db->select('c.*,u.nom');
+		$this->db->from('curs c');
+		$this->db->join('usuari u', 'u.id = c.propietari');
 		$this->db->order_by("id", "asc");
+		$query = $this->db->get();
+		return $query->result_array();
+	}
+	
+	public function getPropietaris(){
+		$condition = "mail != 'admin'";
+		$this->db->select('id,nom');
+		$this->db->from('usuari');
+		$this->db->where($condition);
+		$this->db->order_by("mail", "asc");
 		$query = $this->db->get();
 		return $query->result_array();
 	}

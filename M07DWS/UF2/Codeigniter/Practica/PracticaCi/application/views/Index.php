@@ -14,18 +14,19 @@
     <title>Pàgina principal</title>
 </head>  
 <body>
-	<?php
-		if(isset($error)){
-			echo "<p class='alert alert-warning'>".$error."</p>";
-		}
 	
-	?>
 	<div class="login">
         
+		<?php
+			if(isset($error)){
+				echo "<p class='alert alert-warning'>".$error."</p>";
+			}
+		?>
+	
         <form name="f1" id="fLogin" method="post" action="<?php echo site_url('Index/checkLogin');?>">
           <div class="form-group">
-            <label for="fnom">Nom</label>
-            <input type="text" class="form-control" id="fnom" name="fnom" placeholder="Nom">
+            <label for="fmail">Correu electrònic</label>
+            <input type="mail" class="form-control" id="fmail" name="fmail" placeholder="Correu electrònic">
           </div>
           <div class="form-group">
             <label for="fpw">Contrasenya</label>

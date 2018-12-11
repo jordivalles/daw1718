@@ -22,15 +22,15 @@ class Index extends CI_Controller {
 		////carreguem el model per fer les consultes
 		$this->load->model('ModelConsultes');
 		
-		//nom
-        $data['nom'] = $this->input->post('fnom');
+		//mail
+        $data['mail'] = $this->input->post('fmail');
         
         //contrasenya
 		$data['pw'] = $this->input->post('fpw');
 		
         $data['check'] = $this->ModelConsultes->checkUsuari($data);
 		
-		if($data['check']==true && ($data['nom']=='admin' && $data['pw']=='admin')){
+		if($data['check']==true && ($data['mail']=='admin' && $data['pw']=='admin')){
 			//$this->load->view('Admin');
 			redirect('Admin/index', 'refresh');
 		}else if($data['check']==true){
@@ -63,7 +63,7 @@ class Index extends CI_Controller {
         //contrasenya 2
 		$data['pw2'] = $this->input->post('fpw2');
         
-		//nom artístic
+		//nom
 		$data['nom'] = $this->input->post('fnom');
 		
 		//carreguem el model per fer les consultes
@@ -76,7 +76,7 @@ class Index extends CI_Controller {
         }else if($data['pw1']!=$data['pw2']){
             $data['error'] = "Les dues contrasenyes han de coincidir.<br/>";
         }else if($data['check']==true){
-			$data['error'] = "Ja existeix un usuari amb aquest mail, utilitza un altre.<br/>";
+			$data['error'] = "Ja existeix un usuari amb aquest mail!<br/>";
 		}else{
             $this->ModelConsultes->registrar($data);
             $data['exit'] = "El teu registre s'ha completat satisfactòriament. Ja pots entrar desde la pàgina principal.";
@@ -89,17 +89,7 @@ class Index extends CI_Controller {
         $this->load->view('Registre',$data);
         
     }
-  
-    public function cpublic(){
-        
-        //carreguem el model per fer les consultes
-		$this->load->model('ModelConsultes');
-        
-		//reserves
-		$data['reserves'] = $this->ModelConsultes->getReserves();
-		
-        $this->load->view('Calendari',$data);
-    }
+	
 }
 
 

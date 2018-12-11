@@ -19,6 +19,9 @@ class Admin extends CI_Controller {
 		//cursos disponibles
 		$data['cursos'] = $this->ModelConsultes->getCursos();
 		
+		//usuaris (propietaris)
+		$data['propietaris'] = $this->ModelConsultes->getPropietaris();
+		
 		$this->load->view('Admin',$data);
 	}
 	
@@ -43,6 +46,9 @@ class Admin extends CI_Controller {
 		
 		//cursos disponibles
 		$data['cursos'] = $this->ModelConsultes->getCursos();
+		
+		//usuaris (propietaris)
+		$data['propietaris'] = $this->ModelConsultes->getPropietaris();
 		
 		$this->load->view('Admin',$data);
 	}

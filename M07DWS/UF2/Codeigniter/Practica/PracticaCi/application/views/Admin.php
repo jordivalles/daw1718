@@ -69,11 +69,24 @@
 			
 			
 			<form name="f1" id="fData" method="post" action="<?php echo site_url('Admin/crearCurs');?>">
-				<label for="fid">Identificador del curs</label>
-				<input type="text" id="fid" name="fid" required placeholder="Id"/><br/>
-				<label for="fid">Propietari del curs</label>
-				<input type="text" id="fpropietari" name="fpropietari" required placeholder="Propietari"/><br/>
-				<input type="submit" id="fsub" name="fsub" value="Crear" />
+				<div class="form-group">
+					<label for="fid">Identificador del curs</label>
+					<input type="text" id="fid" name="fid" required placeholder="Id"/>
+				</div>
+				<div class="form-group">
+					<label for="fpropietari">Propietari del curs</label>
+					<select name="fpropietari" id="fpropietari">
+					<?php
+						
+						for ($i=0; $i<count($propietaris); $i++){
+							echo "<option value='".$propietaris[$i]['id']."'>".$propietaris[$i]['nom']."</option>";
+						}
+						
+					?>
+					</select>
+				</div>
+				<!--input type="text" id="fpropietari" name="fpropietari" required placeholder="Propietari"/><br/-->
+				<button type="submit" class="btn btn-primary">Crear</button>
 			</form>
 		
 			<?php
@@ -98,7 +111,7 @@
 					for ($i=0; $i<count($cursos); $i++){
 						echo "<tr>
 						<td style='background-color: #F5F5DC;'>".$cursos[$i]['id']."</td>
-						<td>".$cursos[$i]['propietari']."</td>";
+						<td>".$cursos[$i]['nom']."</td>";
 						if($cursos[$i]['estat']==0){
 							echo "<td style='background-color: #DAA520;'>No visible</td>
 							</tr>";
