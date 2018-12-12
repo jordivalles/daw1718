@@ -25,43 +25,53 @@ class Propietari extends CI_Controller {
 		$this->load->view('Propietari',$data);
 	}
 	
-	public function reservarData(){
-		//carreguem el model per fer les consultes
-		$this->load->model('ModelConsultes');
-		
-		//guardem la data
-		$data['data'] = $this->input->post('fdate');
-		
-		//guardem hora inici
-		$data['hora'] = $this->input->post('fhora');
-		
-		//guardem durada
-		$data['durada'] = $this->input->post('fdurada');
-		
-		//codi artista
-		$data['id'] = $this->session->codiPropietari;
-		
-		
-		
-		//cursos del propietari
-		$data['cursos'] = $this->ModelConsultes->getCursosPropietari($data);
-		
-		$this->load->view('Menu',$data);
-	}
-	
 	public function modificarCurs(){
 		
 		//id del curs
 		$data['idcurs'] = $this->uri->segment('3');
 		
-		echo $data['idcurs'];
-		
 		//carreguem el model per fer les consultes
 		$this->load->model('ModelConsultes');
 		
+        $data['dades'] = $this->ModelConsultes->getDadesCurs($data);
+        
+        //var_dump($data['dades']);
+        
+        $this->load->view('ModificarCurs',$data);
+        
 		//redirect('Menu/index', 'refresh');
 	}
 	
+    
+    public function updateCurs(){
+        
+		//carreguem el model per fer les consultes
+		$this->load->model('ModelConsultes');
+		
+        //guardem id
+        $data['id'] = $this->input->post('fid');
+        
+		//guardem el titol
+		$data['titol'] = $this->input->post('ftitol');
+        
+		//guardem data inici
+		$data['durada'] = $this->input->post('fdatainici');
+		
+		//guardem hores totals
+		$data['htotals'] = $this->input->post('fhtotals');
+		
+		//guardem hores setmanals
+		$data['hsetmanals'] = $this->input->post('fhsetmanals');
+		
+		
+		$data['id'] = $this->session->codiPropietari;
+		
+        //cursos del propietari
+		$data['cursos'] = $this->ModelConsultes->getCursosPropietari($data);
+		
+		$this->load->view('Propietari',$data);
+	}
+    
 	public function eliminarReserva(){
 		//id
 		$data['id'] = $this->uri->segment('3');

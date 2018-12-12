@@ -42,15 +42,15 @@
 		  </div>
 		  <div class="form-group">
 			<label for="fpw1">Contrasenya</label>
-			<input type="password" id="fpw1" name="fpw1" value="<?php if(isset($pw1)){echo $pw1;}?>"/>
+			<input type="password" id="fpw1" name="fpw1" value="<?php if(isset($pw1)){echo $pw1;}?>" placeholder="Contrasenya"/>
 		  </div>
 		  <div class="form-group">
 			<label for="fpw2">Repeteix la contrasenya</label>
-			<input type="password" id="fpw2" name="fpw2" value="<?php if(isset($pw2)){echo $pw2;}?>"/>
+			<input type="password" id="fpw2" name="fpw2" value="<?php if(isset($pw2)){echo $pw2;}?>" placeholder="Contrasenya"/>
 		  </div>
 		  <div class="form-group">
 			<label for="fnom">Nom d'usuari</label>
-			<input type="text" id="fnom" name="fnom" value="<?php if(isset($nom)){echo $nom;}?>"/>
+			<input type="text" id="fnom" name="fnom" value="<?php if(isset($nom)){echo $nom;}?>" placeholder="Nom"/>
 		  </div>
 		  <button type="submit" class="btn btn-primary">Registrar</button>
 		</form>

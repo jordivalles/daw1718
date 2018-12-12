@@ -106,6 +106,15 @@ class ModelConsultes extends CI_Model{
 		return $query->result_array();
 	}
 	
+    public function getDadesCurs($data){
+		$condition = "id =" . "'" . $data['idcurs'] . "'";
+		$this->db->select('*');
+		$this->db->from('curs');
+		$this->db->where($condition);
+		$query = $this->db->get();
+		return $query->result_array();
+	}
+    
 	public function reservar($data){
 		$this->db->set('dia', $data['data']);
 		$this->db->set('hinici', $data['hora']);
