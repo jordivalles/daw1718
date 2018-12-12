@@ -20,10 +20,10 @@ class ModelConsultes extends CI_Model{
 		}
 	}
 	
-	public function getIdArtista($data){
+	public function getIdPropietari($data){
 		$condition = "mail =" . "'" . $data['mail'] . "' AND " . "password =" . "'" . $data['pw'] . "'";
 		$this->db->select('id');
-		$this->db->from('artistes');
+		$this->db->from('usuari');
 		$this->db->where($condition);
 		$query = $this->db->get();
 		return $query->result_array();
@@ -50,17 +50,6 @@ class ModelConsultes extends CI_Model{
 		$this->db->set('nom', $data['nom']);
 		$this->db->set('password', $data['pw1']);
 		$this->db->insert('usuari');
-	}
-	
-	
-	/**********Calendari públic********/
-    public function getReserves(){
-		$this->db->select('c.*,a.nomArtistic');
-		$this->db->from('calendari c');
-		$this->db->join('artistes a', 'a.id = c.artista');
-		$this->db->order_by("dia", "asc");
-		$query = $this->db->get();
-		return $query->result_array();
 	}
 	
 	/*******Menú Admin*************/
@@ -106,12 +95,12 @@ class ModelConsultes extends CI_Model{
 	}
 	
 	
-	/********Menú Artistes***************/
+	/********Menú Propietaris***************/
 	
-	public function getReservesArtista($data){
-		$condition = "artista =" . "'" . $data['id'] . "'";
+	public function getCursosPropietari($data){
+		$condition = "propietari =" . "'" . $data['id'] . "'";
 		$this->db->select('*');
-		$this->db->from('calendari');
+		$this->db->from('curs');
 		$this->db->where($condition);
 		$query = $this->db->get();
 		return $query->result_array();

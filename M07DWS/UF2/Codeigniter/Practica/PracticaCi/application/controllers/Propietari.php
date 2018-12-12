@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 // session_start();
-class Menu extends CI_Controller {
+class Propietari extends CI_Controller {
 	
 	public function __construct()
 	{
@@ -17,14 +17,12 @@ class Menu extends CI_Controller {
 		//carreguem el model per fer les consultes
 		$this->load->model('ModelConsultes');
 		
-		$data['id'] = $this->session->codiArtista;
-		//reserves actuals del artista
-		$data['reserves'] = $this->ModelConsultes->getReservesArtista($data);
+		$data['id'] = $this->session->codiPropietari;
 		
-		//dates disponibles
-		$data['disponibles'] = $this->ModelConsultes->getDatesDisponibles();
+		//cursos del propietari
+		$data['cursos'] = $this->ModelConsultes->getCursosPropietari($data);
 		
-		$this->load->view('Menu',$data);
+		$this->load->view('Propietari',$data);
 	}
 	
 	public function reservarData(){
@@ -41,38 +39,22 @@ class Menu extends CI_Controller {
 		$data['durada'] = $this->input->post('fdurada');
 		
 		//codi artista
-		$data['id'] = $this->session->codiArtista;
-		
-		if($data['data']=='' || $data['hora']=='' ||$data['durada']==''){
-			$data['error'] = "Falten dades per omplir";
-		}else if($data['durada']<=0){
-			$data['error'] = "La durada no és vàlida";
-		}else{
-			//echo $data['data']." ".$data['hora']." ".$data['durada']." ".$data['id'];
-			$this->ModelConsultes->reservar($data);
-			$this->ModelConsultes->deleteDataDisponible($data);
-			$data['hora'] = '';
-			$data['durada'] = '';
-		}
-		
-		//dates disponibles
-		$data['disponibles'] = $this->ModelConsultes->getDatesDisponibles();
+		$data['id'] = $this->session->codiPropietari;
 		
 		
-		//reserves actuals del artista
-		$data['reserves'] = $this->ModelConsultes->getReservesArtista($data);
+		
+		//cursos del propietari
+		$data['cursos'] = $this->ModelConsultes->getCursosPropietari($data);
 		
 		$this->load->view('Menu',$data);
 	}
 	
-	public function modificarReserva(){
-		//id
-		$data['id'] = $this->uri->segment('3');
-		$data['data'] = $this->uri->segment('4');
-		$data['hora'] = $this->uri->segment('5');
-		$data['durada'] = $this->uri->segment('6');
+	public function modificarCurs(){
 		
-		echo $data['id']." ".$data['data']." ".$data['hora']." ".$data['durada'];
+		//id del curs
+		$data['idcurs'] = $this->uri->segment('3');
+		
+		echo $data['idcurs'];
 		
 		//carreguem el model per fer les consultes
 		$this->load->model('ModelConsultes');

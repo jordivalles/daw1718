@@ -35,12 +35,12 @@ class Index extends CI_Controller {
 			redirect('Admin/index', 'refresh');
 		}else if($data['check']==true){
 			//$this->load->view('Menu');
-			//agafem l'id de l'artista actual
-			$data['id'] = $this->ModelConsultes->getIdArtista($data);
-			$this->session->codiArtista = $data['id'][0]["id"];
-			redirect('Menu/index', 'refresh');
+			//agafem l'id del propietari actual
+			$data['id'] = $this->ModelConsultes->getIdPropietari($data);
+			$this->session->codiPropietari = $data['id'][0]["id"];
+			redirect('Propietari/index', 'refresh');
 		}else{
-			$data['error'] = "Credencials incorrectes<br/>";
+			$data['error'] = "Credencials incorrectes";
 			$this->load->view('Index',$data);
 		}
 		
