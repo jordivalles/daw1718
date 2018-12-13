@@ -56,7 +56,7 @@
             
             for ($i=0; $i<count($dades); $i++){
                 echo "<tr>
-                <td style='background-color: #F5F5DC;'>".$dades[$i]['id']."<input type='hidden' name='ftitol' id='ftitol' value='".$dades[$i]['id']."' readonly=true/></td>
+                <td style='background-color: #F5F5DC;'>".$dades[$i]['id']."<input type='hidden' name='fid' id='fid' value='".$dades[$i]['id']."' readonly=true/></td>
                 <td><input type='text' name='ftitol' id='ftitol' value='".$dades[$i]['titol']."'/></td>
                 <td><input type='date' name='fdatainici' id='fdatainici' value='".$dades[$i]['datainici']."'/></td>
                 <td><input type='number' name='fhtotals' id='fhtotals' value='".$dades[$i]['htotals']."'/></td>

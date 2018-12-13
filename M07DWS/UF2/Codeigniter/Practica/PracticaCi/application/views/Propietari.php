@@ -42,6 +42,9 @@
 			margin: 0 auto;
 			margin-top: 10px;
 		}
+		.alert{
+			margin-top: 20px;
+		}
 	</style>
 </head>  
 <body>
@@ -69,12 +72,13 @@
 					}else if($cursos[$i]['estat']==1){
 						echo "<td style='background-color: #ADFF2F;'>Visible</td>";
 					}
-					echo "<td><a href=".site_url('Propietari/modificarCurs/'.$cursos[$i]['id']).">Personalitzar</a></td></tr>";
+					echo "<td><a href=".site_url('Propietari/modificarCurs/'.$cursos[$i]['id']).">Personalitzar</a></td>";
+					echo "<td><a href=".site_url('Propietari/generarCalendari/'.$cursos[$i]['id']).">Generar calendari</a></td></tr>";
 				}
 				
 				echo "</table>";
 			}else{
-				echo "<p class='alert alert-warning'>Encara no tens cap data reservada</p>";
+				echo "<p class='alert alert-warning'>Encara no tens cap curs assignat.</p>";
 			}
 		?>
 		
@@ -82,13 +86,14 @@
 			if(isset($error)){
 				echo "<p class='alert alert-warning'>".$error."</p>";
 			}
+			if(isset($exit)){
+				echo "<p class='alert alert-success'>".$exit."</p>";
+			}
 		?>
 	
 	</div>
 	
-	<a class="out" href="<?php echo site_url('Index/index'); ?>">Torna al menú principal</a>
-
-  
+	<a class="out" href="<?php echo site_url('Index/index'); ?>">Torna al menú principal</a>  
   
 </body>   
 </html>

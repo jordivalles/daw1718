@@ -115,12 +115,14 @@ class ModelConsultes extends CI_Model{
 		return $query->result_array();
 	}
     
-	public function reservar($data){
-		$this->db->set('dia', $data['data']);
-		$this->db->set('hinici', $data['hora']);
-		$this->db->set('durada', $data['durada']);
-		$this->db->set('artista', $data['id']);
-		$this->db->insert('calendari');
+	public function actualitzarCurs($data){
+		$condition = "id ='" . $data['cid'] . "'";
+		$this->db->set('titol', $data['titol']);
+		$this->db->set('datainici', $data['datainici']);
+		$this->db->set('htotals', $data['htotals']);
+		$this->db->set('hsetmanals', $data['hsetmanals']);
+		$this->db->where($condition);
+		$this->db->update('curs');
 	}
 	
 	public function deleteDataDisponible($data){
