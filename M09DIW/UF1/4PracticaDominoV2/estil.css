@@ -75,14 +75,16 @@ body {
   display: none;
 }
 .f0x1:after,
+.f1x0:after,
+.f0x1:before,
+.f1x0:before {
+  display: none;
+}
+.f0x1:after,
 .f1x0:after {
   display: block;
   top: 50%;
   left: 75%;
-}
-.f0x1:before,
-.f1x0:before {
-  display: none;
 }
 .f0x3 .bola3,
 .f3x0 .bola3 {
@@ -179,8 +181,8 @@ body {
 }
 .f1x4 .bola3:after,
 .f4x1 .bola3:after {
-  transform: translate(450%, -375%);
   display: block;
+  transform: translate(450%, -375%);
 }
 .f1x5 .bola1,
 .f5x1 .bola1 {
@@ -377,6 +379,17 @@ body {
 .f3x4 .bola3,
 .f4x3 .bola3 {
   display: block;
+  top: 50%;
+  left: 75%;
+}
+.f3x4 .bola1:before,
+.f4x3 .bola1:before {
+  display: block;
+  transform: translate(225%, 200%);
+}
+.f3x4 .bola3,
+.f4x3 .bola3 {
+  display: block;
   top: 75%;
   left: 60%;
 }
@@ -395,6 +408,17 @@ body {
 .f5x3 .bola1:after {
   display: block;
   transform: translate(450%, 375%);
+}
+.f3x5 .bola1:before,
+.f5x3 .bola1:before {
+  display: block;
+  transform: translate(225%, 200%);
+}
+.f3x5 .bola3,
+.f5x3 .bola3 {
+  display: block;
+  top: 50%;
+  left: 75%;
 }
 .f3x5 .bola1:before,
 .f5x3 .bola1:before {
@@ -436,8 +460,24 @@ body {
 .f3x6 .bola3,
 .f6x3 .bola3 {
   display: block;
+  top: 50%;
+  left: 75%;
+}
+.f3x6 .bola1:before,
+.f6x3 .bola1:before {
+  display: block;
+  transform: translate(225%, 200%);
+}
+.f3x6 .bola3,
+.f6x3 .bola3 {
+  display: block;
   top: 75%;
   left: 60%;
+}
+.f3x6 .bola3:after,
+.f6x3 .bola3:after {
+  display: block;
+  transform: translate(450%, -375%);
 }
 .f3x6 .bola3:after,
 .f6x3 .bola3:after {
@@ -551,6 +591,11 @@ body {
 .f4x6 .bola3:after,
 .f6x4 .bola3:after {
   display: block;
+  transform: translate(450%, -375%);
+}
+.f4x6 .bola3:after,
+.f6x4 .bola3:after {
+  display: block;
   transform: translate(225%, -375%);
 }
 .f4x6 .bola3:before,
@@ -631,6 +676,16 @@ body {
   display: block;
   top: 75%;
   left: 60%;
+}
+.f5x6 .bola3:after,
+.f6x5 .bola3:after {
+  display: block;
+  transform: translate(450%, -375%);
+}
+.f5x6 .bola3:before,
+.f6x5 .bola3:before {
+  display: block;
+  transform: translate(225%, -200%);
 }
 .f5x6 .bola3:after,
 .f6x5 .bola3:after {

@@ -1,107 +1,850 @@
-body{
+@suma450: 450%;
+@75: 75%;
+@25: 25%;
+
+body {
     height: 100%;
     width: 100%;
+    background-color: #f2f2f2;
 }
 
-.meitat{
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 100%;
-    width: 2px;
-    background-color: black;
-    &:after{
-        display: block;
-        content: "";
+.fitxa {
+    //
+    margin: 50px 0px 10px 10px;
+    //
+    display: block;
+    float: left;
+    position: relative;
+    height: 75px;
+    width: 150px;
+    background-color: white;
+    border: 1px solid black;
+
+    .meitat {
         position: absolute;
-        top: 50%;
+        top: 0%;
         left: 50%;
-        transform: translate(-50%,-50%);
-        width: 8px;
-        height: 8px;
-        background-color: white;
-        border-radius: 50%;
-        border: 1px solid black;
+        transform: translateX(-50%);
+        height: 100%;
+        width: 2px;
+        background-color: black;
+
+        &:after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+            border: 1px solid black;
+        }
     }
-}
 
-.fitxa0x0{
-    //
-    margin: 20px;
-    //
-    display: block;
-    position: relative;
-    height: 75px;
-    width: 200px;
-    background-color: aquamarine;
-    border: 1px solid black;
-    
-}
-
-.fitxa1x1{
-    //
-    margin: 20px;
-    //
-    display: block;
-    position: relative;
-    height: 75px;
-    width: 200px;
-    background-color: aquamarine;
-    border: 1px solid black;
-    &:after,&:before{
+    &:after,
+    &:before,
+    .bola1,
+    .bola2,
+    .bola3,
+    .bola1:after,
+    .bola1:before,
+    .bola2:after,
+    .bola2:before,
+    .bola3:after,
+    .bola3:before,
+    .bola4 {
+        display: none;
         position: absolute;
         content: "";
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         width: 10px;
         height: 10px;
         border-radius: 50%;
         background-color: black;
     }
-    &:after{
+
+    &:after {
+        display: block;
+        top: 25%;
+        left: 60%;
+    }
+
+    &:before {
+        display: block;
+        top: 75%;
+        left: 90%;
+    }
+}
+
+.vertical {
+    transform: rotate(90deg);
+}
+
+.f0x0 {
+
+    &:after,
+    &:before {
+        display: none;
+    }
+}
+
+.f0x1,
+.f1x0 {
+
+    &:after {
+        display: block;
         top: 50%;
         left: 75%;
     }
-    &:before{
+
+    &:before {
+        display: none;
+    }
+
+}
+
+.f0x2,
+f2x0 {}
+
+.f0x3,
+.f3x0 {
+
+    .bola3 {
+        display: block;
+        top: 50%;
+        left: 75%;
+    }
+}
+
+.f0x4,
+.f4x0 {
+
+    .bola3 {
+        display: block;
+        top: 75%;
+        left: 60%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+    }
+}
+
+.f0x5,
+.f5x0 {
+
+    .bola3 {
+        display: block;
+        top: 75%;
+        left: 60%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450/2, -@suma450/2 - -@25);
+        }
+    }
+}
+
+.f0x6,
+.f6x0 {
+
+    .bola3 {
+        display: block;
+        top: 75%;
+        left: 60%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450/2, -@suma450 - -@75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+    }
+
+    .bola4 {
+        display: block;
+        top: 75%;
+        left: 75%;
+    }
+}
+
+.f1x1 {
+
+    &:after {
+        top: 50%;
+        left: 75%;
+    }
+
+    &:before {
         top: 50%;
         left: 25%;
     }
 }
 
-.fitxa2x2{
-    //
-    margin: 20px;
-    //
-    display: block;
-    position: relative;
-    height: 75px;
-    width: 200px;
-    background-color: aquamarine;
-    border: 1px solid black;
-    &:after,&:before,.div1,.div1:after{
-        position: absolute;
-        content: "";
-        transform: translate(-50%,-50%);
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: black;
+.f1x2,
+.f2x1 {
+
+    .bola1 {
+        display: block;
+        top: 50%;
+        left: 25%;
     }
-    &:after{
-        top: 25%;
-        left: 65%;
+}
+
+.f1x3,
+.f3x1 {
+
+    .bola1 {
+        display: block;
+        top: 50%;
+        left: 25%;
     }
-    &:before{
+
+    .bola3 {
+        display: block;
+        top: 50%;
+        left: 75%;
+    }
+}
+
+.f1x4,
+.f4x1 {
+
+    .bola1 {
+        display: block;
+        top: 50%;
+        left: 25%;
+    }
+
+    .bola3 {
+        display: block;
         top: 75%;
-        left: 85%;
-    }
-    .div1{
-        top: 25%;
-        left: 15%;
-        &:after{
-            transform: translate(385%,325%);
-            //top: 75%;
-            //left: 35%;
+        left: 60%;
+
+        &:after {
+            transform: translate(@suma450, -@suma450 - -@75);
+            display: block;
         }
     }
+}
+
+.f1x5,
+.f5x1 {
+
+    .bola1 {
+        display: block;
+        top: 50%;
+        left: 25%;
+    }
+
+    .bola3 {
+        display: block;
+        top: 75%;
+        left: 60%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450/2, -@suma450/2 - -@25);
+        }
+    }
+}
+
+.f1x6,
+.f6x1 {
+
+    .bola1 {
+        display: block;
+        top: 50%;
+        left: 25%;
+    }
+
+    .bola3 {
+        display: block;
+        top: 75%;
+        left: 60%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450/2, -@suma450 - -@75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+    }
+
+    .bola4 {
+        display: block;
+        top: 75%;
+        left: 75%;
+    }
+}
+
+.f2x2 {
+
+    .bola1 {
+        display: block;
+        top: 25%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, @suma450 - @75);
+        }
+    }
+}
+
+.f2x3,
+.f3x2 {
+
+    .bola1 {
+        display: block;
+        top: 25%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, @suma450 - @75);
+        }
+    }
+
+    .bola3 {
+        display: block;
+        top: 50%;
+        left: 75%;
+    }
+}
+
+.f2x4,
+.f4x2 {
+
+    .bola1 {
+        display: block;
+        top: 25%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, @suma450 - @75);
+        }
+    }
+
+    .bola3 {
+        display: block;
+        top: 75%;
+        left: 60%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+    }
+}
+
+.f2x5,
+.f5x2 {
+
+    .bola1 {
+        display: block;
+        top: 25%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, @suma450 - @75);
+        }
+
+    }
+
+    .bola3 {
+        display: block;
+        top: 75%;
+        left: 60%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450/2, -@suma450/2 - -@25);
+        }
+    }
+}
+
+.f2x6,
+.f6x2 {
+
+    .bola1 {
+        display: block;
+        top: 25%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, @suma450 - @75);
+        }
+
+    }
+
+    .bola3 {
+        display: block;
+        top: 75%;
+        left: 60%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450/2, -@suma450 - -@75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+    }
+
+    .bola4 {
+        display: block;
+        top: 75%;
+        left: 75%;
+    }
+}
+
+.f3x3 {
+
+    .bola1 {
+        display: block;
+        top: 25%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, @suma450 - @75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450/2, @suma450/2 - @25);
+        }
+    }
+
+    .bola3 {
+        display: block;
+        top: 50%;
+        left: 75%;
+    }
+
+}
+
+.f3x4,
+.f4x3 {
+
+    .bola1 {
+        display: block;
+        top: 25%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, @suma450 - @75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450/2, @suma450/2 - @25);
+        }
+    }
+
+    .bola3 {
+        display: block;
+        top: 75%;
+        left: 60%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+    }
+}
+
+.f3x5,
+.f5x3 {
+
+    .bola1 {
+        display: block;
+        top: 25%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, @suma450 - @75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450/2, @suma450/2 - @25);
+        }
+    }
+
+    .bola3 {
+        display: block;
+        top: 75%;
+        left: 60%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450/2, -@suma450/2 - -@25);
+        }
+    }
+}
+
+.f3x6,
+.f6x3 {
+
+    .bola1 {
+        display: block;
+        top: 25%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, @suma450 - @75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450/2, @suma450/2 - @25);
+        }
+    }
+
+    .bola3 {
+        display: block;
+        top: 75%;
+        left: 60%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450/2, -@suma450 - -@75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+    }
+
+    .bola4 {
+        display: block;
+        top: 75%;
+        left: 75%;
+    }
+}
+
+.f4x4 {
+
+    .bola1 {
+        display: block;
+        top: 25%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, @suma450 - @75);
+        }
+    }
+
+    .bola2 {
+        display: block;
+        top: 75%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+    }
+
+    .bola3 {
+        display: block;
+        top: 75%;
+        left: 60%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+    }
+
+}
+
+.f4x5,
+.f5x4 {
+
+    .bola1 {
+        display: block;
+        top: 25%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, @suma450 - @75);
+        }
+    }
+
+    .bola2 {
+        display: block;
+        top: 75%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+    }
+
+    .bola3 {
+        display: block;
+        top: 75%;
+        left: 60%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450/2, -@suma450/2 - -@25);
+        }
+    }
+}
+
+.f4x6,
+.f6x4 {
+
+    .bola1 {
+        display: block;
+        top: 25%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, @suma450 - @75);
+        }
+    }
+
+    .bola2 {
+        display: block;
+        top: 75%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+    }
+
+    .bola3 {
+        display: block;
+        top: 75%;
+        left: 60%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450/2, -@suma450 - -@75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+    }
+
+    .bola4 {
+        display: block;
+        top: 75%;
+        left: 75%;
+    }
+}
+
+.f5x5 {
+
+    .bola1 {
+        display: block;
+        top: 25%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, @suma450 - @75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450/2, @suma450/2 - @25);
+        }
+    }
+
+    .bola2 {
+        display: block;
+        top: 75%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+    }
+
+    .bola3 {
+        display: block;
+        top: 75%;
+        left: 60%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450/2, -@suma450/2 - -@25);
+        }
+    }
+
+}
+
+.f5x6,
+.f6x5 {
+
+    .bola1 {
+        display: block;
+        top: 25%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, @suma450 - @75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450/2, @suma450/2 - @25);
+        }
+    }
+
+    .bola2 {
+        display: block;
+        top: 75%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+    }
+
+    .bola3 {
+        display: block;
+        top: 75%;
+        left: 60%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450/2, -@suma450 - -@75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+    }
+
+    .bola4 {
+        display: block;
+        top: 75%;
+        left: 75%;
+    }
+}
+
+.f6x6 {
+
+    .bola1 {
+        display: block;
+        top: 25%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, @suma450 - @75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450/2, @suma450 - @75);
+        }
+    }
+
+    .bola2 {
+        display: block;
+        top: 75%;
+        left: 10%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450/2, -@suma450 - -@75);
+        }
+    }
+
+    .bola3 {
+        display: block;
+        top: 75%;
+        left: 60%;
+
+        &:after {
+            display: block;
+            transform: translate(@suma450/2, -@suma450 - -@75);
+        }
+
+        &:before {
+            display: block;
+            transform: translate(@suma450, -@suma450 - -@75);
+        }
+    }
+
+    .bola4 {
+        display: block;
+        top: 75%;
+        left: 75%;
+    }
+
 }

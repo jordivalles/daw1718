@@ -1,0 +1,793 @@
+@suma450: 450%;
+@75: 75%;
+@25: 25%;
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+.numFitxes(@n1, @n2) {
+    & when (@n1=0) {
+
+        & when (@n2=0),
+        (@n2=1) {
+
+            &:after,
+            &:before {
+                display: none;
+            }
+        }
+
+        & when (@n2=1) {
+
+            &:after {
+                display: block;
+                top: 50%;
+                left: 75%;
+            }
+
+        }
+
+        & when (@n2=3) {
+
+            .bola3 {
+                display: block;
+                top: 50%;
+                left: 75%;
+            }
+
+        }
+
+        & when (@n2=4),
+        (@n2=5) {
+
+            .bola3 {
+                display: block;
+                top: 75%;
+                left: 60%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, -@suma450 - -@75);
+                }
+            }
+
+        }
+
+        & when (@n2=5) {
+
+            .bola3:before {
+                display: block;
+                transform: translate(@suma450/2, -@suma450/2 - -@25);
+            }
+        }
+
+
+
+        & when (@n2=6) {
+
+            .bola3 {
+                display: block;
+                top: 75%;
+                left: 60%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450/2, -@suma450 - -@75);
+                }
+
+                &:before {
+                    display: block;
+                    transform: translate(@suma450, -@suma450 - -@75);
+                }
+            }
+
+            .bola4 {
+                display: block;
+                top: 75%;
+                left: 75%;
+            }
+
+        }
+    }
+
+    & when (@n1=1) {
+        & when (@n2=1) {
+            &:after {
+                top: 50%;
+                left: 75%;
+            }
+
+            &:before {
+                top: 50%;
+                left: 25%;
+            }
+        }
+
+        & when (@n2=2),
+        (@n2=3),
+        (@n2=4),
+        (@n2=5),
+        (@n2=6) {
+            .bola1 {
+                display: block;
+                top: 50%;
+                left: 25%;
+            }
+        }
+
+        & when (@n2=3) {
+
+            .bola3 {
+                display: block;
+                top: 50%;
+                left: 75%;
+            }
+        }
+
+        & when (@n2=4),
+        (@n2=5) {
+
+            .bola3 {
+                display: block;
+                top: 75%;
+                left: 60%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, -@suma450 - -@75);
+
+                }
+            }
+        }
+
+        & when (@n2=5) {
+
+            .bola3:before {
+                display: block;
+                transform: translate(@suma450/2, -@suma450/2 - -@25);
+
+            }
+        }
+
+        & when (@n2=6) {
+
+            .bola3 {
+                display: block;
+                top: 75%;
+                left: 60%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450/2, -@suma450 - -@75);
+                }
+
+                &:before {
+                    display: block;
+                    transform: translate(@suma450, -@suma450 - -@75);
+                }
+            }
+
+            .bola4 {
+                display: block;
+                top: 75%;
+                left: 75%;
+            }
+        }
+    }
+
+    & when (@n1=2) {
+        & when(@n2=2) {
+            .bola1 {
+                display: block;
+                top: 25%;
+                left: 10%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, @suma450 - @75);
+                }
+            }
+        }
+
+        & when(@n2=3) {
+            .bola1 {
+                display: block;
+                top: 25%;
+                left: 10%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, @suma450 - @75);
+                }
+            }
+
+            .bola3 {
+                display: block;
+                top: 50%;
+                left: 75%;
+            }
+        }
+
+        & when(@n2=4) {
+            .bola1 {
+                display: block;
+                top: 25%;
+                left: 10%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, @suma450 - @75);
+                }
+            }
+
+            .bola3 {
+                display: block;
+                top: 75%;
+                left: 60%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, -@suma450 - -@75);
+                }
+            }
+        }
+
+        & when(@n2=5) {
+            .bola1 {
+                display: block;
+                top: 25%;
+                left: 10%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, @suma450 - @75);
+                }
+
+            }
+
+            .bola3 {
+                display: block;
+                top: 75%;
+                left: 60%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, -@suma450 - -@75);
+                }
+
+                &:before {
+                    display: block;
+                    transform: translate(@suma450/2, -@suma450/2 - -@25);
+                }
+            }
+        }
+
+        & when(@n2=6) {
+            .bola1 {
+                display: block;
+                top: 25%;
+                left: 10%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, @suma450 - @75);
+                }
+
+            }
+
+            .bola3 {
+                display: block;
+                top: 75%;
+                left: 60%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450/2, -@suma450 - -@75);
+                }
+
+                &:before {
+                    display: block;
+                    transform: translate(@suma450, -@suma450 - -@75);
+                }
+            }
+
+            .bola4 {
+                display: block;
+                top: 75%;
+                left: 75%;
+            }
+        }
+    }
+
+    & when (@n1=3) {
+
+        & when (@n2=3),
+        (@n2=4),
+        (@n2=5),
+        (@n2=6) {
+            .bola1 {
+                display: block;
+                top: 25%;
+                left: 10%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, @suma450 - @75);
+                }
+
+                &:before {
+                    display: block;
+                    transform: translate(@suma450/2, @suma450/2 - @25);
+                }
+            }
+
+            .bola3 {
+                display: block;
+                top: 50%;
+                left: 75%;
+            }
+        }
+
+        & when (@n2=4),
+        (@n2=5),
+        (@n2=6) {
+            .bola1:before {
+                display: block;
+                transform: translate(@suma450/2, @suma450/2 - @25);
+
+            }
+
+            .bola3 {
+                display: block;
+                top: 75%;
+                left: 60%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, -@suma450 - -@75);
+                }
+            }
+        }
+
+        & when (@n2=5) {
+
+            .bola3 {
+
+                &:before {
+                    display: block;
+                    transform: translate(@suma450/2, -@suma450/2 - -@25);
+                }
+            }
+        }
+
+        & when (@n2=6) {
+
+            .bola3 {
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450/2, -@suma450 - -@75);
+                }
+
+                &:before {
+                    display: block;
+                    transform: translate(@suma450, -@suma450 - -@75);
+                }
+            }
+
+            .bola4 {
+                display: block;
+                top: 75%;
+                left: 75%;
+            }
+        }
+    }
+
+    & when (@n1=4) {
+
+        & when (@n2=4),
+        (@n2=5),
+        (@n2=6) {
+            .bola1 {
+                display: block;
+                top: 25%;
+                left: 10%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, @suma450 - @75);
+                }
+            }
+
+            .bola2 {
+                display: block;
+                top: 75%;
+                left: 10%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, -@suma450 - -@75);
+                }
+            }
+
+            .bola3 {
+                display: block;
+                top: 75%;
+                left: 60%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, -@suma450 - -@75);
+                }
+            }
+        }
+
+        & when (@n2=5) {
+
+            .bola3:before {
+                display: block;
+                transform: translate(@suma450/2, -@suma450/2 - -@25);
+            }
+
+        }
+
+        & when (@n2=6) {
+
+            .bola3 {
+                &:after {
+                    display: block;
+                    transform: translate(@suma450/2, -@suma450 - -@75);
+                }
+
+                &:before {
+                    display: block;
+                    transform: translate(@suma450, -@suma450 - -@75);
+                }
+            }
+
+            .bola4 {
+                display: block;
+                top: 75%;
+                left: 75%;
+            }
+        }
+    }
+
+    & when (@n1=5) {
+
+        & when (@n2=5),
+        (@n2=6) {
+            .bola1 {
+                display: block;
+                top: 25%;
+                left: 10%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, @suma450 - @75);
+                }
+
+                &:before {
+                    display: block;
+                    transform: translate(@suma450/2, @suma450/2 - @25);
+                }
+            }
+
+            .bola2 {
+                display: block;
+                top: 75%;
+                left: 10%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, -@suma450 - -@75);
+                }
+            }
+
+            .bola3 {
+                display: block;
+                top: 75%;
+                left: 60%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, -@suma450 - -@75);
+                }
+
+                &:before {
+                    display: block;
+                    transform: translate(@suma450/2, -@suma450/2 - -@25);
+                }
+            }
+        }
+
+        & when (@n2=6) {
+
+            .bola3 {
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450/2, -@suma450 - -@75);
+                }
+
+                &:before {
+                    display: block;
+                    transform: translate(@suma450, -@suma450 - -@75);
+                }
+            }
+
+            .bola4 {
+                display: block;
+                top: 75%;
+                left: 75%;
+            }
+        }
+    }
+
+    & when (@n1=6) {
+        & when (@n2=6) {
+            .bola1 {
+                display: block;
+                top: 25%;
+                left: 10%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, @suma450 - @75);
+                }
+
+                &:before {
+                    display: block;
+                    transform: translate(@suma450/2, @suma450 - @75);
+                }
+            }
+
+            .bola2 {
+                display: block;
+                top: 75%;
+                left: 10%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450, -@suma450 - -@75);
+                }
+
+                &:before {
+                    display: block;
+                    transform: translate(@suma450/2, -@suma450 - -@75);
+                }
+            }
+
+            .bola3 {
+                display: block;
+                top: 75%;
+                left: 60%;
+
+                &:after {
+                    display: block;
+                    transform: translate(@suma450/2, -@suma450 - -@75);
+                }
+
+                &:before {
+                    display: block;
+                    transform: translate(@suma450, -@suma450 - -@75);
+                }
+            }
+
+            .bola4 {
+                display: block;
+                top: 75%;
+                left: 75%;
+            }
+        }
+    }
+}
+
+.fitxa {
+    //
+    margin: 50px 0px 10px 10px;
+    //
+    display: block;
+    float: left;
+    position: relative;
+    height: 75px;
+    width: 150px;
+    background-color: white;
+    border: 1px solid black;
+
+    .meitat {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        width: 2px;
+        background-color: black;
+
+        &:after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+            border: 1px solid black;
+        }
+    }
+
+    &:after,
+    &:before,
+    .bola1,
+    .bola2,
+    .bola3,
+    .bola1:after,
+    .bola1:before,
+    .bola2:after,
+    .bola2:before,
+    .bola3:after,
+    .bola3:before,
+    .bola4 {
+        display: none;
+        position: absolute;
+        content: "";
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: black;
+    }
+
+    &:after {
+        display: block;
+        top: 25%;
+        left: 60%;
+    }
+
+    &:before {
+        display: block;
+        top: 75%;
+        left: 90%;
+    }
+}
+
+.vertical {
+    transform: rotate(90deg);
+}
+
+.f0x0 {
+    .numFitxes(0, 0);
+}
+
+.f0x1,
+.f1x0 {
+    .numFitxes(0, 1);
+}
+
+.f0x2,
+f2x0 {}
+
+.f0x3,
+.f3x0 {
+    .numFitxes(0, 3);
+}
+
+.f0x4,
+.f4x0 {
+    .numFitxes(0, 4);
+}
+
+.f0x5,
+.f5x0 {
+    .numFitxes(0, 5);
+}
+
+.f0x6,
+.f6x0 {
+    .numFitxes(0, 6);
+}
+
+.f1x1 {
+    .numFitxes(1, 1);
+}
+
+.f1x2,
+.f2x1 {
+    .numFitxes(1, 2);
+}
+
+.f1x3,
+.f3x1 {
+    .numFitxes(1, 3);
+}
+
+.f1x4,
+.f4x1 {
+    .numFitxes(1, 4);
+}
+
+.f1x5,
+.f5x1 {
+    .numFitxes(1, 5);
+}
+
+.f1x6,
+.f6x1 {
+    .numFitxes(1, 6);
+}
+
+.f2x2 {
+    .numFitxes(2, 2);
+}
+
+.f2x3,
+.f3x2 {
+    .numFitxes(2, 3);
+}
+
+.f2x4,
+.f4x2 {
+    .numFitxes(2, 4);
+}
+
+.f2x5,
+.f5x2 {
+    .numFitxes(2, 5);
+}
+
+.f2x6,
+.f6x2 {
+    .numFitxes(2, 6);
+}
+
+.f3x3 {
+    .numFitxes(3, 3);
+}
+
+.f3x4,
+.f4x3 {
+    .numFitxes(3, 4);
+}
+
+.f3x5,
+.f5x3 {
+    .numFitxes(3, 5);
+}
+
+.f3x6,
+.f6x3 {
+    .numFitxes(3, 6);
+}
+
+.f4x4 {
+    .numFitxes(4, 4);
+}
+
+.f4x5,
+.f5x4 {
+    .numFitxes(4, 5);
+}
+
+.f4x6,
+.f6x4 {
+    .numFitxes(4, 6);
+}
+
+.f5x5 {
+    .numFitxes(5, 5);
+}
+
+.f5x6,
+.f6x5 {
+    .numFitxes(5, 6);
+}
+
+.f6x6 {
+    .numFitxes(6, 6);
+}
