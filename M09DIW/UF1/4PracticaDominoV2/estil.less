@@ -8,6 +8,81 @@ body {
     background-color: #f2f2f2;
 }
 
+.fitxa {
+    //
+    margin: 75px 0px 10px 5px;
+    //
+    display: block;
+    float: left;
+    position: relative;
+    height: 75px;
+    width: 150px;
+    background-color: white;
+    border: 1px solid black;
+
+    .meitat {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        width: 2px;
+        background-color: black;
+
+        &:after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+            border: 1px solid black;
+        }
+    }
+
+    &:after,
+    &:before,
+    .bola1,
+    .bola2,
+    .bola3,
+    .bola1:after,
+    .bola1:before,
+    .bola2:after,
+    .bola2:before,
+    .bola3:after,
+    .bola3:before,
+    .bola4 {
+        display: none;
+        position: absolute;
+        content: "";
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: black;
+    }
+
+    &:after {
+        display: block;
+        top: 25%;
+        left: 60%;
+    }
+
+    &:before {
+        display: block;
+        top: 75%;
+        left: 90%;
+    }
+}
+
+.vertical {
+    transform: rotate(90deg);
+}
+
 .numFitxes(@n1, @n2) {
     & when (@n1=0) {
 
@@ -584,81 +659,6 @@ body {
             }
         }
     }
-}
-
-.fitxa {
-    //
-    margin: 50px 0px 10px 10px;
-    //
-    display: block;
-    float: left;
-    position: relative;
-    height: 75px;
-    width: 150px;
-    background-color: white;
-    border: 1px solid black;
-
-    .meitat {
-        position: absolute;
-        top: 0%;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 100%;
-        width: 2px;
-        background-color: black;
-
-        &:after {
-            display: block;
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 8px;
-            height: 8px;
-            background-color: white;
-            border-radius: 50%;
-            border: 1px solid black;
-        }
-    }
-
-    &:after,
-    &:before,
-    .bola1,
-    .bola2,
-    .bola3,
-    .bola1:after,
-    .bola1:before,
-    .bola2:after,
-    .bola2:before,
-    .bola3:after,
-    .bola3:before,
-    .bola4 {
-        display: none;
-        position: absolute;
-        content: "";
-        transform: translate(-50%, -50%);
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: black;
-    }
-
-    &:after {
-        display: block;
-        top: 25%;
-        left: 60%;
-    }
-
-    &:before {
-        display: block;
-        top: 75%;
-        left: 90%;
-    }
-}
-
-.vertical {
-    transform: rotate(90deg);
 }
 
 .f0x0 {
