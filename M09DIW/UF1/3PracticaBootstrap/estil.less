@@ -1,49 +1,86 @@
-body{
-    header{
-        nav{
-            .roda{
+body {
+    header {
+        nav {
+            .roda {
                 display: block;
                 margin-right: 5px;
                 color: white;
             }
-        }
-    }
-    
-    main{
-        
-        .imatges{
-            .imatge{
-                height: 500px;
-                width: 100;
-                background-repeat: no-repeat;
-                background-size: cover;
-                h5{
-                    font-family: 'Roboto', sans-serif;
-                    font-style: bold;
-                }
-                .ciutat{
-                    //color: orange;
-                    text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
-                }
-                .muntanya{
-                    color: orange;
-                    text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
-                }
-                .platja{
-                    //color: orange;
-                    text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
+
+            .titol {
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+                font-weight: bold;
+                font-family: 'Black Han Sans', sans-serif;
+            }
+
+            div {
+                form {
+                    p {
+                        display: block;
+                        margin: 0 auto;
+                        width: 40px;
+                        height: 38px;
+                        background-color: #E7EBEE;
+                        border-bottom-left-radius: 5px;
+                        border-top-left-radius: 5px;
+                        text-align: center;
+                        line-height: 38px;
+                        color: #484D52;
+                    }
+
+                    input {
+                        border-bottom-left-radius: 0px !important;
+                        border-top-left-radius: 0px !important;
+                    }
                 }
             }
         }
-        
-        .our{
-            .services{
+    }
+
+    main {
+
+        .imatges {
+            .imatge {
+                height: 500px;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                text-shadow: 0px 0px 24px rgba(0, 0, 0, 1);
+
+                h5 {
+                    font-family: 'Black Han Sans', sans-serif;
+                    font-size: 2em;
+                    font-weight: bold;
+                    color: orange;
+                }
+
+                p {
+                    font-family: 'Black Han Sans', sans-serif;
+                    font-size: 1.2em;
+                    font-weight: bold;
+                    color: white;
+                }
+            }
+        }
+
+        .our {
+
+            .services,
+            .recomendations,
+            .clients {
                 text-align: center;
-                h1{
+                margin: 20px;
+
+                h1 {
                     display: block;
                     position: relative;
                     padding: 10px;
-                    &:after{
+                    font-size: 1.5rem;
+                    font-family: 'Black Han Sans', sans-serif;
+                    margin: 10px;
+
+                    &:after {
                         display: block;
                         content: "";
                         position: absolute;
@@ -51,15 +88,363 @@ body{
                         right: 50%;
                         transform: translateX(50%);
                         width: 5%;
+                        min-width: 100px;
                         height: 3px;
                         background-color: orange;
                     }
                 }
-                
+
             }
-            .opcions{
-                background-color: #eeee;
+
+            .barres {
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+                p {
+                    text-align: center;
+                }
+
+                .progress {
+                    height: 25px;
+                    padding: 0px;
+                }
+            }
+
+            .opcions {
+                background-color: #EFEFEF;
                 text-align: center;
+
+                .tipus {
+                    margin-top: 25px;
+                    text-align: center;
+
+                    &:nth-child(1) {
+                        i {
+                            -webkit-transform: rotate(-45deg);
+                            -moz-transform: rotate(-45deg);
+                        }
+                    }
+
+                    span {
+                        display: block;
+                        margin: 0 auto;
+                        color: orange;
+                        background-color: white;
+                        width: 100px;
+                        height: 100px;
+                        -moz-border-radius: 50%;
+                        -webkit-border-radius: 50%;
+                        border-radius: 50%;
+                        font-size: 2em;
+                        text-align: center;
+
+                        i {
+                            margin-top: 30px;
+                        }
+                    }
+
+                    h2 {
+                        color: #747472;
+                        font-size: 1.5rem;
+                        font-family: 'Black Han Sans', sans-serif;
+                    }
+
+                    p {
+                        font-family: 'Roboto', sans-serif;
+                    }
+
+                }
+            }
+
+            .grupimatges {
+
+                display: block;
+                width: 60%;
+                margin: 0 auto;
+
+                .img {
+                    display: block;
+                    margin: 0 auto;
+                    width: 100%;
+                    height: 250px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                .r1 {
+                    .primer {
+
+                        position: relative;
+                        background-image: url(images/working1.jpg);
+
+                        .hovered {
+                            display: none;
+                            position: absolute;
+                            top: 0%;
+                            left: 0%;
+                            width: 100%;
+                            height: 100%;
+                            text-align: center;
+                            //opacity: 1;
+                            background-color: rgba(255, 165, 0, 0.8);
+                            padding: 5px;
+
+                            h3 {
+                                color: #007DFF;
+                                margin-top: 20px;
+                            }
+
+                            p {
+                                color: white;
+                            }
+                        }
+
+                        &:hover {
+                            .hovered {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .segon {
+                        background-image: url(images/working2.jpeg);
+                    }
+
+                    .tercer {
+                        background-image: url(images/working3.jpeg);
+                    }
+                }
+
+                .r2 {
+                    .quart {
+                        background-image: url(images/working4.jpeg);
+                    }
+
+                    .cinque {
+                        background-image: url(images/working5.jpeg);
+                    }
+
+                    .sise {
+                        background-image: url(images/working6.jpeg);
+                    }
+                }
+
+            }
+
+            #cr2 {
+                .carousel-item {
+                    //position: relative;
+                    background-color: black;
+                    height: 100px;
+
+                    p {
+                        position: absolute;
+                        font-size: 1em;
+                        font-weight: bold;
+                        color: grey;
+                        top: 0%;
+                    }
+
+
+                }
+            }
+
+            .mainfooter {
+
+                .terstegen_faqs {
+                    width: 60%;
+                    margin: 20px auto 20px auto;
+
+                    .terstegen {
+                        font-family: 'Roboto', sans-serif;
+
+                        h3 {
+                            font-family: 'Black Han Sans', sans-serif;
+                            font-size: 1.3rem;
+                            margin-bottom: 30px;
+                        }
+
+                        p {
+                            font-size: 1.1rem;
+                            margin: 0px 0px 0px 40px;
+                        }
+
+                        div {
+                            margin-bottom: 20px;
+
+                            i {
+                                display: block;
+                                margin: 10px;
+                                float: left;
+                                font-size: 2.5rem;
+                            }
+                        }
+                    }
+
+                    .faqs {
+
+                        h3 {
+                            font-family: 'Black Han Sans', sans-serif;
+                            font-size: 1.3rem;
+                            margin-bottom: 30px;
+                        }
+
+                        p {
+                            font-size: 1rem;
+                        }
+
+                        div {
+                            border-radius: 0px !important;
+                        }
+
+                        .links {
+                            font-size: 1.1rem;
+
+                            i {
+                                display: block;
+                                float: right;
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+
+                .fun {
+                    width: 60%;
+                    margin: 0 auto;
+                    text-align: center;
+                    font-family: 'Roboto', sans-serif;
+
+                    h3 {
+                        font-family: 'Black Han Sans', sans-serif;
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        width: 100%;
+        height: 100%;
+        margin-top: 25px;
+        background-color: #2e2e2e;
+        color: #929292;
+        padding: 10px;
+
+        .foot {
+            width: 50%;
+            margin: 30px auto 0px auto;
+
+            .xarxes {
+                max-width: 150px;
+
+                i {
+                    display: block;
+                    margin: 10px;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    border-radius: 50%;
+                    //-moz-border-radius: 50%;
+                    //-webkit-border-radius: 50%;
+                    border: 2px solid #6F6F6F;
+                    text-align: center;
+                    min-width: 30px;
+                    min-height: 30px;
+                }
+            }
+        }
+    }
+}
+
+//---------
+@media (min-width:768px) {
+    //md-xl
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    //sm
+    body {
+        header {
+            nav {
+                .titol {
+                    margin: 0 auto 0 0;
+                }
+            }
+        }
+
+        main {
+            .our {
+                .opcions {
+                    .tipus {
+                        span {
+                            float: left;
+                        }
+
+                        p {
+                            padding: 25px;
+                        }
+                    }
+                }
+
+                .mainfooter {
+                    .terstegen {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        footer {
+            .foot {
+                .xarxes {
+                    max-width: 90px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    //xs
+    body {
+        //background-color: green !important;
+
+        header {
+            nav {
+                .titol {
+                    margin: 0 auto 0 0;
+                }
+            }
+        }
+
+        main {
+            .our {
+                .opcions {
+                    .tipus {
+                        span {
+                            margin-top: 15px;
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+
+                .grupimatges {
+                    width: 100%;
+                }
+
+                .mainfooter {
+                    .terstegen_faqs {
+                        width: 95%;
+
+                        .terstegen {
+                            display: none;
+                        }
+                    }
+                }
             }
         }
     }

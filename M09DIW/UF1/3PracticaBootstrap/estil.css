@@ -4,35 +4,66 @@ body header nav .roda {
   margin-right: 5px;
   color: white;
 }
+body header nav .titol {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-family: 'Black Han Sans', sans-serif;
+}
+body header nav div form p {
+  display: block;
+  margin: 0 auto;
+  width: 40px;
+  height: 38px;
+  background-color: #E7EBEE;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  text-align: center;
+  line-height: 38px;
+  color: #484D52;
+}
+body header nav div form input {
+  border-bottom-left-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+}
 body main .imatges .imatge {
   height: 500px;
-  width: 100;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  text-shadow: 0px 0px 24px #000000;
 }
 body main .imatges .imatge h5 {
-  font-family: 'Roboto', sans-serif;
-  font-style: bold;
-}
-body main .imatges .imatge .ciutat {
-  text-shadow: 0px 0px 4px #000000;
-}
-body main .imatges .imatge .muntanya {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
   color: orange;
-  text-shadow: 0px 0px 4px #000000;
 }
-body main .imatges .imatge .platja {
-  text-shadow: 0px 0px 4px #000000;
+body main .imatges .imatge p {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
 }
-body main .our .services {
+body main .our .services,
+body main .our .recomendations,
+body main .our .clients {
   text-align: center;
+  margin: 20px;
 }
-body main .our .services h1 {
+body main .our .services h1,
+body main .our .recomendations h1,
+body main .our .clients h1 {
   display: block;
   position: relative;
   padding: 10px;
+  font-size: 1.5rem;
+  font-family: 'Black Han Sans', sans-serif;
+  margin: 10px;
 }
-body main .our .services h1:after {
+body main .our .services h1:after,
+body main .our .recomendations h1:after,
+body main .our .clients h1:after {
   display: block;
   content: "";
   position: absolute;
@@ -40,10 +71,234 @@ body main .our .services h1:after {
   right: 50%;
   transform: translateX(50%);
   width: 5%;
+  min-width: 100px;
   height: 3px;
   background-color: orange;
 }
-body main .our .opcions {
-  background-color: #eeee;
+body main .our .barres {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+body main .our .barres p {
   text-align: center;
+}
+body main .our .barres .progress {
+  height: 25px;
+  padding: 0px;
+}
+body main .our .opcions {
+  background-color: #EFEFEF;
+  text-align: center;
+}
+body main .our .opcions .tipus {
+  margin-top: 25px;
+  text-align: center;
+}
+body main .our .opcions .tipus:nth-child(1) i {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+}
+body main .our .opcions .tipus span {
+  display: block;
+  margin: 0 auto;
+  color: orange;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  font-size: 2em;
+  text-align: center;
+}
+body main .our .opcions .tipus span i {
+  margin-top: 30px;
+}
+body main .our .opcions .tipus h2 {
+  color: #747472;
+  font-size: 1.5rem;
+  font-family: 'Black Han Sans', sans-serif;
+}
+body main .our .opcions .tipus p {
+  font-family: 'Roboto', sans-serif;
+}
+body main .our .grupimatges {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+body main .our .grupimatges .img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body main .our .grupimatges .r1 .primer {
+  position: relative;
+  background-image: url(images/working1.jpg);
+}
+body main .our .grupimatges .r1 .primer .hovered {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(255, 165, 0, 0.8);
+  padding: 5px;
+}
+body main .our .grupimatges .r1 .primer .hovered h3 {
+  color: #007DFF;
+  margin-top: 20px;
+}
+body main .our .grupimatges .r1 .primer .hovered p {
+  color: white;
+}
+body main .our .grupimatges .r1 .primer:hover .hovered {
+  display: block;
+}
+body main .our .grupimatges .r1 .segon {
+  background-image: url(images/working2.jpeg);
+}
+body main .our .grupimatges .r1 .tercer {
+  background-image: url(images/working3.jpeg);
+}
+body main .our .grupimatges .r2 .quart {
+  background-image: url(images/working4.jpeg);
+}
+body main .our .grupimatges .r2 .cinque {
+  background-image: url(images/working5.jpeg);
+}
+body main .our .grupimatges .r2 .sise {
+  background-image: url(images/working6.jpeg);
+}
+body main .our #cr2 .carousel-item {
+  background-color: black;
+  height: 100px;
+}
+body main .our #cr2 .carousel-item p {
+  position: absolute;
+  font-size: 1em;
+  font-weight: bold;
+  color: grey;
+  top: 0%;
+}
+body main .our .mainfooter .terstegen_faqs {
+  width: 60%;
+  margin: 20px auto 20px auto;
+}
+body main .our .mainfooter .terstegen_faqs .terstegen {
+  font-family: 'Roboto', sans-serif;
+}
+body main .our .mainfooter .terstegen_faqs .terstegen h3 {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+body main .our .mainfooter .terstegen_faqs .terstegen p {
+  font-size: 1.1rem;
+  margin: 0px 0px 0px 40px;
+}
+body main .our .mainfooter .terstegen_faqs .terstegen div {
+  margin-bottom: 20px;
+}
+body main .our .mainfooter .terstegen_faqs .terstegen div i {
+  display: block;
+  margin: 10px;
+  float: left;
+  font-size: 2.5rem;
+}
+body main .our .mainfooter .terstegen_faqs .faqs h3 {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+body main .our .mainfooter .terstegen_faqs .faqs p {
+  font-size: 1rem;
+}
+body main .our .mainfooter .terstegen_faqs .faqs div {
+  border-radius: 0px !important;
+}
+body main .our .mainfooter .terstegen_faqs .faqs .links {
+  font-size: 1.1rem;
+}
+body main .our .mainfooter .terstegen_faqs .faqs .links i {
+  display: block;
+  float: right;
+  text-align: right;
+}
+body main .our .mainfooter .fun {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+body main .our .mainfooter .fun h3 {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 1.3rem;
+}
+body footer {
+  width: 100%;
+  height: 100%;
+  margin-top: 25px;
+  background-color: #2e2e2e;
+  color: #929292;
+  padding: 10px;
+}
+body footer .foot {
+  width: 50%;
+  margin: 30px auto 0px auto;
+}
+body footer .foot .xarxes {
+  max-width: 150px;
+}
+body footer .foot .xarxes i {
+  display: block;
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  border: 2px solid #6F6F6F;
+  text-align: center;
+  min-width: 30px;
+  min-height: 30px;
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body header nav .titol {
+    margin: 0 auto 0 0;
+  }
+  body main .our .opcions .tipus span {
+    float: left;
+  }
+  body main .our .opcions .tipus p {
+    padding: 25px;
+  }
+  body main .our .mainfooter .terstegen {
+    display: none;
+  }
+  body footer .foot .xarxes {
+    max-width: 90px;
+  }
+}
+@media (max-width: 575.98px) {
+  body header nav .titol {
+    margin: 0 auto 0 0;
+  }
+  body main .our .opcions .tipus span {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  body main .our .grupimatges {
+    width: 100%;
+  }
+  body main .our .mainfooter .terstegen_faqs {
+    width: 95%;
+  }
+  body main .our .mainfooter .terstegen_faqs .terstegen {
+    display: none;
+  }
 }

@@ -1,0 +1,406 @@
+body {
+    height: 100vh;
+}
+
+nav {
+    form {
+        p {
+            display: flex;
+            width: 30px;
+            margin-top: 17px;
+            height: 38px;
+            background-color: #eeeeee;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+
+#imagenes-bc {
+    height: 500px;
+
+    &:nth-child(1) {
+        background-image: url(img1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &:nth-child(2) {
+        background-image: url(img2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &:nth-child(3) {
+        background-image: url(img3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .carousel-caption {
+        h5 {
+            font-size: 1.5em;
+            color: orange;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    }
+
+}
+
+
+main {
+
+
+
+    section {
+        margin: auto;
+        width: 70%;
+        text-align: center;
+
+        &:nth-child(3) {
+            ul {
+                p:nth-child(3) {
+                    position: relative;
+
+                }
+
+                .button {
+                    display: inline-block;
+                    background-color: blue;
+                    border: none;
+                    color: white;
+                    padding: 5px;
+                }
+            }
+        }
+
+
+
+        .button {
+            background-color: blue;
+            border: none;
+            color: white;
+            padding: 5px;
+
+        }
+
+
+
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: bold;
+            position: relative;
+            margin: 50px;
+
+            &:after {
+                content: "";
+                display: block;
+                margin: auto;
+                width: 100px;
+                margin-top: 15px;
+                border-top: 3px orange solid;
+
+            }
+        }
+
+
+
+    }
+
+    .container {
+        p {
+            text-align: center;
+        }
+
+        .progress {
+            height: 30px;
+            padding: 0px;
+        }
+
+    }
+
+    #art1 { //Donde los iconitos del avion y tal
+
+        background-color: #f2f2f2;
+
+
+        ul {
+            margin: auto;
+
+            &:nth-child(1) {
+                li:nth-child(1) {
+                    i {
+                        -webkit-transform: rotate(-45deg);
+                        -moz-transform: rotate(-45deg);
+                    }
+                }
+            }
+
+            text-align: center;
+
+            li:nth-child(1) {
+                color: orange;
+                margin: auto;
+                display: block;
+                background-color: white;
+                width: 100px;
+                height: 100px;
+                -moz-border-radius: 50%;
+                -webkit-border-radius: 50%;
+                border-radius: 50%;
+                font-size: 2em;
+                position: relative;
+
+                i {
+                    margin-top: 30px;
+                }
+            }
+
+
+        }
+    }
+
+    #art2 { //Donde las imagenes
+        width: 80%;
+        margin: auto;
+        display: block;
+
+        ul {
+            margin: 0px;
+            width:100%;
+            height: 200px;
+        }
+
+        ul:nth-child(1) {
+            
+            background-image: url('paisaje1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            &:hover{
+                &:before
+                {
+                 display:block;
+                content:"whatever";
+                background-color: orange;
+                width:100%;
+                height:100%;
+                opacity: 0.2;
+                }
+                
+            }
+        }
+
+        ul:nth-child(2) {
+            background-image: url('paisaje2.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        ul:nth-child(3) {
+            background-image: url('paisaje3.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        ul:nth-child(4) {
+            background-image: url('paisaje4.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        ul:nth-child(5) {
+            background-image: url('paisaje5.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        ul:nth-child(6) {
+            background-image: url('paisaje6.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+    }
+
+    .orden { //Esto esta aqui porque pensaba que se tenia que cambioar el orden de 2 cosas, lo dejo por si acaso
+
+
+        section:nth-child(1) {
+            text-align: left;
+            margin-top: 39px;
+            margin-bottom: 30px;
+
+            div {
+
+
+                div:nth-child(1) {
+                    ul {
+                        margin-bottom: 20px;
+
+                        i {
+                            display: inline-block;
+                            float: left;
+                            font-size: 2em;
+                        }
+
+                        p {
+                            margin: 0px;
+                            margin-left: 40px;
+
+                        }
+
+                        p:nth-child(2) {
+                            font-size: 0.94em;
+                        }
+
+                        p:nth-child(3) {
+                            font-size: 0.8em;
+                        }
+
+                    }
+
+                    p:nth-child(5) {
+                        color: blue;
+                    }
+                }
+
+                div:nth-child(2) {
+                    text-align: left;
+
+                    p {
+                        font-size: 0.8em;
+                    }
+
+                    div {
+                        ul {
+                            margin: 0px;
+                        }
+                    }
+
+                    .links {
+                        div {
+                            padding: 4px;
+                            margin: 0px;
+                            color: blue;
+
+                            div {
+                                &:after {
+                                    display: inline-block;
+                                    float: right;
+                                    content: ">";
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    #carousel2 { //Segundo carrusel
+        .carousel-item {
+            background-color: black;
+            height: 75px;
+
+            p {
+                position: absolute;
+                z-index: -1;
+                font-size: 1em;
+                font-weight: bold;
+                color: grey;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+            }
+
+
+        }
+    }
+
+    footer {
+        margin-top: 30px;
+        margin-bottom: 0px;
+        background-color: #2e2e2e;
+        color: #7b99aa;
+
+        div {
+            div {
+                margin: 30px;
+            }
+
+            div:nth-child(1) {
+                text-align: right;
+            }
+
+            div:nth-child(2) {
+                display: flex;
+
+                p {
+                    width: 25px;
+                    height: 25px;
+                    -moz-border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    border-radius: 50%;
+                    border: 1px solid #7b99aa;
+                    margin: 5px;
+                }
+
+                i {
+                    font-size: 0.8em;
+                    margin-left: 7px;
+
+                }
+            }
+        }
+
+    }
+
+}
+
+
+//--------------------------------------
+@media (min-width:731px) and (max-width: 1150px) {
+    main {
+        /*.orden {
+            display: flex; //Este codigo sirve para cambiar de orden cosas, me lie, lo dejo por si acaso//
+            flex-direction: column;
+
+            section:nth-child(2) {
+                order: 1;
+            }
+
+            section:nth-child(1) {
+                order: 2;
+            }
+        }
+        */
+        
+    }
+
+}
+
+//--------------------------------------
+@media (max-width: 730px) {
+    .orden{
+            div
+            {
+                #funciona 
+                {
+                    display:none;
+                }
+            }
+        }
+}
