@@ -92,7 +92,9 @@
 			<?php
 				if(isset($error)){
 					echo "<p class='alert alert-warning'>".$error."</p>";
-				}
+				}else if(isset($exit)){
+                    echo "<p class='alert alert-success'>".$exit."</p>";
+                }
 			?>
 			
 		</div>

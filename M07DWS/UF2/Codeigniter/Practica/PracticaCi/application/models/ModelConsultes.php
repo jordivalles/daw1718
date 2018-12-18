@@ -94,6 +94,15 @@ class ModelConsultes extends CI_Model{
 		}
 	}
 	
+    public function getMailPropietari($data){
+		$condition = "id =" . "'" . $data['propietari'] . "'";
+		$this->db->select('mail');
+		$this->db->from('usuari');
+		$this->db->where($condition);
+		$this->db->limit(1);
+		$query = $this->db->get();
+        return $query->result_array(); 
+	}
 	
 	/********Menú Propietaris***************/
 	
