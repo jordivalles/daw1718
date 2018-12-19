@@ -6,17 +6,11 @@ class Propietari extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->helper('url');
-		$this->load->database();
-		$this->load->library('session');		
+		$this->load->database();	
 	}
 
 	public function index()
 	{    
-	
-		//carreguem el model per fer les consultes
-		$this->load->model('ModelConsultes');
-		
 		$data['id'] = $this->session->codiPropietari;
 		
 		//cursos del propietari
@@ -30,9 +24,6 @@ class Propietari extends CI_Controller {
 		//id del curs
 		$data['idcurs'] = $this->uri->segment('3');
 		
-		//carreguem el model per fer les consultes
-		$this->load->model('ModelConsultes');
-		
         $data['dades'] = $this->ModelConsultes->getDadesCurs($data);
         
         //var_dump($data['dades']);
@@ -45,9 +36,6 @@ class Propietari extends CI_Controller {
     
     public function updateCurs(){
         
-		//carreguem el model per fer les consultes
-		$this->load->model('ModelConsultes');
-		
         //guardem id
         $data['cid'] = $this->input->post('fid');
         
@@ -78,9 +66,6 @@ class Propietari extends CI_Controller {
 	}
     
 	public function generarCalendari(){
-		
-		//carreguem el model per fer les consultes
-		$this->load->model('ModelConsultes');
 		
 		//id del curs
 		$data['idcurs'] = $this->uri->segment('3');
@@ -158,8 +143,6 @@ class Propietari extends CI_Controller {
 		$data['data'] = $this->uri->segment('4');
 		//echo $data['id']." ".$data['data'];
 		
-		//carreguem el model per fer les consultes
-		$this->load->model('ModelConsultes');
 		$this->ModelConsultes->deleteReserva($data);
 		$this->ModelConsultes->habilitarData($data);
 		redirect('Menu/index', 'refresh');

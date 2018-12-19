@@ -6,9 +6,9 @@ class Index extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->helper('url');
+		//$this->load->helper('url');
 		$this->load->database();
-		$this->load->library('session');	
+		//$this->load->library('session');	
 	}
 
 	public function index(){
@@ -20,7 +20,7 @@ class Index extends CI_Controller {
     public function checkLogin(){
 		
 		////carreguem el model per fer les consultes
-		$this->load->model('ModelConsultes');
+		//$this->load->model('ModelConsultes');
 		
 		//mail
         $data['mail'] = $this->input->post('fmail');
@@ -65,9 +65,6 @@ class Index extends CI_Controller {
         
 		//nom
 		$data['nom'] = $this->input->post('fnom');
-		
-		//carreguem el model per fer les consultes
-        $this->load->model('ModelConsultes');
 			
 		$data['check'] = $this->ModelConsultes->checkRepetit($data);
 		

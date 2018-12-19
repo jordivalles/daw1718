@@ -6,16 +6,11 @@ class Admin extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->helper('url');
-		$this->load->database();
-		$this->load->library('session');		
+		$this->load->database();		
 	}
 
 	public function index()
 	{    
-		//carreguem el model per fer les consultes
-		$this->load->model('ModelConsultes');
-		
 		//cursos disponibles
 		$data['cursos'] = $this->ModelConsultes->getCursos();
 		
@@ -26,10 +21,6 @@ class Admin extends CI_Controller {
 	}
 	
 	public function crearCurs(){
-		
-        
-		//carreguem el model per fer les consultes
-		$this->load->model('ModelConsultes');
 		
 		//guardem la data
 		$data['id'] = $this->input->post('fid');
