@@ -4,28 +4,30 @@
 @gris_marges: #7c7c7c;
 @taronja: #da521e;
 
-.rotacions(@graus,@fill){
+.rotacions(@graus, @fill) {
     transform: rotate(@graus);
-    li i{
+
+    li i {
         transform: rotate(-@graus);
     }
-    
-    li:nth-child(@{fill}){
+
+    li:nth-child(@{fill}) {
         background-color: aqua;
     }
 }
 
-#barra_lateral{
-    
+#barra_lateral {
+
     width: 20%;
     border: 1px solid black;
-    .backimg{
+
+    .backimg {
         background-image: url(images/stars.jpg);
         height: 150px;
         background-position: center center;
     }
-    
-    .pilot{
+
+    .pilot {
         border-radius: 50%;
         overflow: hidden;
         width: 150px;
@@ -33,41 +35,45 @@
         margin: 0px auto;
         margin-top: -72px;
         border: 10px solid white;
-        img{
+
+        img {
             width: 150px;
             height: 150px;
         }
     }
-    
-    #r_twitter:checked~ul{
+
+    #r_twitter:checked ~ ul {
         .rotacions(0deg, 2);
     }
-    
-    #r_facebook:checked~ul{
+
+    #r_facebook:checked ~ ul {
         .rotacions(-90deg, 3);
     }
-    
-    #r_instagram:checked~ul{
+
+    #r_instagram:checked ~ ul {
         .rotacions(180deg, 4);
     }
-    #r_linkedin:checked~ul{
+
+    #r_linkedin:checked ~ ul {
         .rotacions(90deg, 5);
     }
-    ul{
+
+    ul {
         transition: transform 2s linear;
         position: relative;
         //background-color: lime;
         height: 150px;
         width: 200px;
         margin: 0 auto;
-        li{
+
+        li {
             position: absolute;
             border: 1px solid black;
             background-color: orange;
             border-radius: 50%;
             width: 30px;
             height: 30px;
-            
+
             //Alternativa per centrar els icones
             text-align: center;
             line-height: 30px;
@@ -77,16 +83,19 @@
                 text-align: center;
             }*/
             z-index: 10;
-            i{
+
+            i {
                 transition: transform 1s linear;
             }
         }
-        li:nth-child(1){
+
+        li:nth-child(1) {
             top: 50%;
             right: 50%;
-            transform: translate(50%,-50%);
+            transform: translate(50%, -50%);
         }
-        li:nth-child(2){
+
+        li:nth-child(2) {
             /*
             Alertativa: amb pixels (treure transform)
             i treure el nth-child(1) i posar el width i height del ul a 30px
@@ -95,36 +104,41 @@
             */
             top: 0%;
             right: 50%;
-            transform: translate(50%,-50%);
+            transform: translate(50%, -50%);
         }
-        li:nth-child(3){
+
+        li:nth-child(3) {
             /*
             top: 0px;
             left: 65px;
             */
             top: 50%;
             right: 0%;
-            transform: translate(50%,-50%);
+            transform: translate(50%, -50%);
         }
-        li:nth-child(4){
+
+        li:nth-child(4) {
             /*
             top: 65px;
             left: 0px;
             */
             bottom: 0%;
             left: 50%;
-            transform: translate(-50%,50%);
+            transform: translate(-50%, 50%);
         }
-        li:nth-child(5){
+
+        li:nth-child(5) {
             /*
             top: 65px;
             left: 0px;
             */
             bottom: 50%;
             left: 0%;
-            transform: translate(-50%,50%);
+            transform: translate(-50%, 50%);
         }
-        &:after,&:before{
+
+        &:after,
+        &:before {
             display: block;
             position: absolute;
             content: "";
@@ -132,24 +146,26 @@
             height: 0px;
             background-color: red;
         }
-        &:after{
+
+        &:after {
             bottom: 100%;
             left: 50%;
-            transform: translate(-50%,100%);
+            transform: translate(-50%, 100%);
             border-left: 10px solid white;
             border-right: 10px solid white;
             border-bottom: 75px solid red;
             border-top: 75px solid red;
         }
-        &:before{
+
+        &:before {
             bottom: 50%;
             left: 0%;
-            transform: translate(0%,50%);
+            transform: translate(0%, 50%);
             border-left: 100px solid red;
             border-right: 100px solid red;
             border-bottom: 10px solid white;
             border-top: 10px solid white;
         }
     }
-    
+
 }

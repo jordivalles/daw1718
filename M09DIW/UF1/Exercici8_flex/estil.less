@@ -1,17 +1,19 @@
-.row{
+.row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; //per defecte els divs no canvien de fila, però li podem dir que si que caiguin a la següent fila amb el wrap
     justify-content: space-around;
     align-items: center;
-    div{
+
+    div {
         border: 1px solid black;
         background-color: lime;
         //flex-grow: 1; //per l'amplada de les columnes
         //es reparteixen en l'espai que queda
         min-width: 150px;
     }
-    .header{
+
+    .header {
         flex-grow: 0; //li diem que aquest no creixi
         width: 75px;
         order: 2; //desplaça la columna 2 llocs
