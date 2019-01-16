@@ -385,9 +385,10 @@ html body main .seccio1 .swim .trip .textet {
   padding: 20px 20px 20px 0px;
   width: 75%;
   margin-bottom: 0px;
-  font-family: 'Satisfy', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: italic;
 }
 html body main .seccio2 {
   margin-top: 4%;
@@ -443,8 +444,14 @@ html body main .seccio2 header h1 p span {
 }
 html body main .seccio2 .main {
   position: relative;
+  min-height: 1068px;
   background-color: aqua;
   z-index: 1;
+  height: 718px;
+  width: 100%;
+  background-image: url(imatges/sanpedrorock.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 html body main .seccio2 .main .pinzellades {
   position: absolute;
@@ -457,12 +464,11 @@ html body main .seccio2 .main .pinzellades {
   transform: rotateX(-180deg);
   z-index: 1;
 }
-html body main .seccio2 .main .imatge_sanpedro {
-  height: 1068px;
-  width: 100%;
-  background-image: url(imatges/sanpedrorock.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+html body main .seccio2 .carousel {
+  z-index: 200;
+}
+html body main .seccio2 .carousel .row {
+  z-index: 200;
 }
 html body main .seccio2 .carousel .row .img1,
 html body main .seccio2 .carousel .row .img3 {
@@ -492,6 +498,7 @@ html body main .seccio2 .carousel .row .img3 h2 {
   width: auto;
   color: white;
   font-family: 'Lora', serif;
+  font-style: italic;
   font-size: 22px;
   font-weight: 400;
   z-index: 100;
@@ -531,4 +538,137 @@ html body main .seccio2 .carousel .row .img3 .fletxa {
 }
 html body main .seccio2 .carousel .row .img2 {
   background-color: white;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 0px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  z-index: 210;
+}
+html body main .seccio2 .carousel .row .img2:after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 130%;
+  top: 0%;
+  transform: translateY(-11%);
+  background-color: white;
+  z-index: -1;
+}
+html body main .seccio2 .carousel .row .img2 .titol {
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+}
+html body main .seccio2 .carousel .row .img2 .titol .estrelles i {
+  color: #9cd9da;
+}
+html body main .seccio2 .carousel .row .img2 .titol h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+}
+html body main .seccio2 .carousel .row .img2 .titol span {
+  display: block;
+}
+html body main .seccio2 .carousel .row .img2 .titol p {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 18px;
+}
+html body main .seccio2 .carousel .row .img2 .titol p i {
+  color: #9cd9da;
+}
+html body main .seccio2 .carousel .row .img2 .descripcio {
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  padding: 0px 75px;
+}
+html body main .seccio2 .carousel .row .img2 .boto {
+  background-color: #9cd9da;
+  border: 1px solid #9cd9da;
+  width: 20%;
+  min-width: 140px;
+  margin: 0 auto;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 0px;
+}
+html body main .seccio3_seccio4 {
+  background-image: url(imatges/s3s4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+html body main .seccio3_seccio4 .s3 header {
+  height: 350px;
+  position: relative;
+}
+html body main .seccio3_seccio4 .s3 header h1 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  width: 20%;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-weight: 700;
+  font-size: 50px;
+}
+html body main .seccio3_seccio4 .s3 header h1:after,
+html body main .seccio3_seccio4 .s3 header h1:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0%;
+}
+html body main .seccio3_seccio4 .s3 header h1:after {
+  transform: translate(75%, -50%);
+  background-color: black;
+  width: 225px;
+  height: 2px;
+}
+html body main .seccio3_seccio4 .s3 header h1:before {
+  content: "step 3.";
+  transform: translate(150%, -50%);
+  color: #eaeaea;
+  font-size: 64px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+html body main .seccio3_seccio4 .s3 header h1 span {
+  font-family: 'Satisfy', sans-serif;
+  font-size: 64px;
+  color: #9bd8d9;
+}
+html body main .seccio3_seccio4 .s3 .palmeres_youtube {
+  display: flex;
+  flex-direction: column;
+}
+html body main .seccio3_seccio4 .s3 .palmeres_youtube .palmeres {
+  height: 500px;
+  width: 70%;
+  margin: 0 auto;
+  background-color: aqua;
+  background-image: url(imatges/palmeras8.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+html body main .seccio3_seccio4 .s3 .palmeres_youtube .youtube {
+  background-color: aquamarine;
+  height: 500px;
+  width: 30%;
+  margin: 0 auto;
+  background-image: url(imatges/youtube2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
