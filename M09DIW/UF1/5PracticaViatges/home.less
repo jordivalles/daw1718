@@ -1,0 +1,1865 @@
+@montserrat: 'Montserrat', sans-serif;
+@satisfy: 'Satisfy', sans-serif;
+@lora: 'Lora', serif;
+
+html {
+    height: 100%;
+
+    body {
+        background-color: #FFFDFE;
+        height: 100%;
+        min-width: 160px * 6;
+
+        .guionet {
+
+            position: relative;
+            display: block;
+
+            &:before {
+                display: block;
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0%;
+                transform: translateX(-150%);
+                width: 30px;
+                height: 2px;
+                background-color: white;
+            }
+        }
+
+        //header
+        .imatge {
+            position: relative;
+            height: 90vh;
+            width: 100%;
+            background-image: url(imatges/imgheader.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+
+            .menu_collapsed {
+                display: none;
+            }
+
+            nav {
+                position: absolute;
+                top: 0%;
+                right: 2%;
+
+                .barra {
+
+                    .desplegable {
+                        font-size: 10px;
+                    }
+
+                    li {
+                        &:nth-child(1) {
+                            margin-top: 10px;
+                        }
+
+                        color: white;
+                        font-size: 16px;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        font-family: @montserrat;
+                        font-variant: small-caps;
+                        margin-bottom: 10px;
+
+                        .selected {
+                            li {
+                                margin-left: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .chill {
+                position: absolute;
+                top: 5%;
+                left: 50%;
+                transform: translateX(-50%);
+                font-family: @satisfy;
+                font-size: 64px;
+                color: white;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                margin: 0 auto;
+                height: 175px;
+                width: 20%;
+                min-width: 325px;
+                overflow: hidden;
+
+                img {
+                    width: 150px;
+                    height: 150px;
+                    transform: rotate(25deg);
+                    margin-right: -25px;
+                    margin-bottom: 35px;
+                }
+
+                .chilling {
+                    display: block;
+                    font-family: @satisfy;
+                    font-size: 90px;
+                    color: white;
+                    padding: 50px 0px;
+                    text-align: center;
+                }
+            }
+
+            .insydneytrip {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                position: absolute;
+                height: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10%;
+
+                .sydney {
+                    font-family: @satisfy;
+                    font-size: 64px;
+                    color: #3E7174;
+                }
+
+                .boto {
+                    border-radius: 30px;
+                    padding: 15px 35px 15px 35px;
+                    background-color: #3E7174;
+                    border: 1px solid #3E7174;
+                    font-family: @montserrat;
+                    font-weight: bold;
+                }
+            }
+
+            .info {
+                position: absolute;
+                top: 3%;
+                left: 5%;
+
+                p,
+                span {
+                    display: block;
+                    color: white;
+                    font-family: @montserrat;
+                    font-size: 10px;
+                    font-weight: bold;
+                }
+
+                span {
+                    margin-top: -10px;
+                }
+            }
+
+            .xarxes {
+                display: flex;
+                flex-direction: column-reverse;
+                position: absolute;
+                top: 50%;
+                left: 3%;
+                color: white;
+
+                i {
+                    display: block;
+                    margin-bottom: 10px;
+                    transform: rotateZ(-90deg);
+                    font-size: 10px;
+                }
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    bottom: 0%;
+                    left: 50%;
+                    transform: translateY(105%);
+                    width: 2px;
+                    height: 100px;
+                    background-color: white;
+                }
+            }
+
+            .opcions {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 48%;
+                right: 2.5%;
+                color: white;
+
+                i {
+                    display: block;
+                    position: relative;
+                    margin-bottom: 15px;
+                }
+
+                .numero {
+                    &:after {
+                        position: absolute;
+                        content: "0";
+                        top: 0%;
+                        left: 0%;
+                        transform: translate(-50%, -50%);
+                        width: 13px;
+                        height: 13px;
+                        font-size: 10px;
+                        text-align: center;
+                        line-height: 13px;
+                        border-radius: 50%;
+                        background-color: #A8D9DD;
+                    }
+                }
+            }
+
+            .pinzellades {
+                position: absolute;
+                bottom: 0%;
+                width: 100%;
+                height: 142px;
+                background-image: url(imatges/imgcapa2.png);
+                background-repeat: repeat-x;
+                background-size: contain;
+            }
+        }
+
+        //main
+        .principal {
+            margin-top: 5%;
+
+            .seccio1 {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+
+                .swim {
+                    width: 45%;
+                    margin-left: 20%;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+
+                    .tourhotel {
+                        display: flex;
+                        margin: 0 auto;
+
+                        span {
+                            display: block;
+                            position: relative;
+                            width: 125px;
+                            height: 75px;
+                            text-align: center;
+                            line-height: 75px;
+                            font-size: 32px;
+                            color: black;
+                            font-family: @montserrat;
+                            font-weight: 900;
+                            z-index: 10;
+
+                            &:nth-child(1) {
+                                margin-right: 20px;
+                            }
+
+                            &:nth-child(2) {
+                                margin-left: 20px;
+                            }
+
+                            &:nth-child(1):after,
+                            &:nth-child(2):after {
+                                display: block;
+                                position: absolute;
+                                content: "1.";
+                                font-size: 80px;
+                                font-family: @montserrat;
+                                font-weight: 600;
+                                line-height: 75px;
+                                text-align: center;
+                                color: #eaeaea;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                z-index: -1;
+                            }
+
+                            &:nth-child(2):after {
+                                content: "2.";
+                            }
+                        }
+                    }
+
+                    .imatge_mar {
+                        background-image: url(imatges/imgs1.jpg);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: 50% 50%;
+                        height: 500px;
+                        display: flex;
+
+                        .marc {
+                            position: relative;
+                            margin: auto;
+                            height: 425px;
+                            width: 90%;
+                            border-top: 10px solid white;
+                            border-left: 10px solid white;
+                            border-bottom: 10px solid white;
+
+                            &:after,
+                            &:before {
+                                display: block;
+                                position: absolute;
+                                content: "";
+                                top: 0%;
+                                right: 0%;
+                                width: 10px;
+                                height: 35px;
+                                background-color: white;
+                            }
+
+                            &:before {
+                                top: 100%;
+                                height: 165px;
+                                transform: translateY(-100%);
+                            }
+
+                            .paraula {
+                                color: white;
+                                font-family: @montserrat;
+                                font-size: 32px;
+                                font-weight: 900;
+                                position: absolute;
+                                top: 35%;
+                                right: 0%;
+                                transform: translate(50%, -50%) rotate(90deg);
+                            }
+                        }
+                    }
+
+                    .trip {
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        width: 75%;
+                        min-width: 400px;
+                        top: 0%;
+                        left: 0%;
+                        transform: translate(-75%, 0%);
+
+                        .where {
+                            position: relative;
+                            width: 100%;
+                            background-image: url(imatges/imgsearch.jpg);
+                            background-size: cover;
+
+                            .fons {
+                                display: flex;
+                                flex-direction: column;
+                                width: 100%;
+                                height: 100%;
+                                //
+                                background: -moz-radial-gradient(center, ellipse cover, rgba(47, 91, 92, 0.75) 0%, rgba(47, 91, 92, 0.75) 1%, rgba(47, 91, 92, 1) 100%);
+                                /* FF3.6-15 */
+                                background: -webkit-radial-gradient(center, ellipse cover, rgba(47, 91, 92, 0.75) 0%, rgba(47, 91, 92, 0.75) 1%, rgba(47, 91, 92, 1) 100%);
+                                /* Chrome10-25,Safari5.1-6 */
+                                background: radial-gradient(ellipse at center, rgba(47, 91, 92, 0.75) 0%, rgba(47, 91, 92, 0.75) 1%, rgba(47, 91, 92, 1) 100%);
+                                /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bf2f5b5c', endColorstr='#2f5b5c', GradientType=1);
+
+                                /* IE6-9 fallback on horizontal gradient */
+                                p {
+                                    display: block;
+                                    position: absolute;
+                                    top: 0%;
+                                    left: 0%;
+                                    margin-top: 3%;
+                                    font-family: @montserrat;
+                                    font-size: 40px;
+                                    color: #eaeaea;
+                                    font-weight: 700;
+                                    opacity: 0.1;
+                                }
+
+                                h1 {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    margin: 25px 0px auto auto;
+                                    width: 80%;
+                                    font-size: 40px;
+                                    font-family: @montserrat;
+                                    font-weight: 700;
+                                    color: white;
+                                    text-align: center;
+
+                                    &:before {
+                                        left: 0%;
+                                        transform: translateX(-60%);
+                                        width: 100px;
+                                    }
+
+                                    span {
+                                        display: block;
+                                        margin-left: 25px;
+                                        color: #9cd9da;
+                                        font-family: @satisfy;
+                                    }
+                                }
+
+                                .inputs {
+                                    display: flex;
+                                    flex-direction: row;
+                                    flex-wrap: wrap;
+
+                                    div {
+                                        padding: 20px;
+                                        width: 45%;
+                                        margin: 0 auto;
+                                        position: relative;
+
+                                        h2 {
+                                            font-family: @lora;
+                                            color: white;
+                                            font-size: 14px;
+                                            font-weight: 700;
+                                        }
+
+                                        input {
+                                            padding: .375rem .75rem;
+                                            font-size: 1rem;
+                                            font-weight: 400;
+                                            line-height: 1.5;
+                                            border-radius: 25px;
+                                            border: 1px solid transparent;
+                                            background-clip: padding-box;
+                                            box-sizing: border-box;
+                                            position: relative;
+                                            width: 90%;
+                                            background: rgba(255, 255, 255, 0.2);
+                                        }
+
+                                        i {
+                                            transform: translateX(-300%);
+                                            color: whitesmoke;
+                                            font-size: 10px;
+                                        }
+
+                                        ::placeholder {
+                                            color: #c0cac9;
+                                            font-family: @montserrat;
+                                            font-size: 14px;
+                                        }
+                                    }
+
+                                    .topright {
+
+                                        input:nth-child(2) {
+                                            margin-bottom: 10px;
+                                        }
+                                    }
+                                }
+
+                                .boto_search {
+                                    display: block;
+                                    margin: 20px auto;
+                                    margin-bottom: 40px;
+                                    background-color: #9cd9da;
+                                    border: 1px solid #9cd9da;
+                                    border-radius: 25px;
+                                    width: 20%;
+                                    font-family: @montserrat;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+
+                        .textet {
+                            display: block;
+                            padding: 20px 20px 20px 0px;
+                            width: 75%;
+                            margin-bottom: 0px;
+                            font-family: @lora;
+                            font-size: 14px;
+                            font-weight: 700;
+                            font-style: italic;
+                        }
+                    }
+                }
+            }
+
+            .seccio2 {
+                margin-top: 4%;
+
+                header {
+                    height: 400px;
+                    z-index: 100;
+
+                    h1 {
+                        display: block;
+                        position: relative;
+                        color: #eaeaea;
+                        font-family: @montserrat;
+                        font-weight: 600;
+                        font-size: 90px;
+                        text-align: center;
+                        z-index: 100;
+
+                        &:after,
+                        &:before {
+                            display: block;
+                            position: absolute;
+                            content: "";
+                            top: 100%;
+                            left: 50%;
+                            transform: translate(-375%, -100%);
+                            width: 2px;
+                            height: 30px;
+                            background-color: #c3c3c3;
+                        }
+
+                        &:before {
+                            background-color: black;
+                            transform: translate(-375%, 0%);
+                            height: 75px;
+                        }
+
+                        p {
+                            display: block;
+                            position: absolute;
+                            width: 100%;
+                            font-family: @montserrat;
+                            color: black;
+                            font-weight: 900;
+                            font-size: 50px;
+                            top: 150%;
+                            left: 50%;
+                            transform: translate(-50%, 250%) rotate(-90deg);
+                            z-index: 100;
+
+                            span {
+                                font-family: @satisfy;
+                                font-size: 64px;
+                                color: #9bd8d9;
+                            }
+                        }
+                    }
+                }
+
+                .main {
+                    position: relative;
+                    min-height: 1068px;
+                    z-index: 1;
+                    height: 718px;
+                    width: 100%;
+                    background-image: url(imatges/imgsanpedrorock.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: 50% 50%;
+
+                    .pinzellades {
+                        position: absolute;
+                        top: 0%;
+                        width: 100%;
+                        height: 142px;
+                        background-image: url(imatges/imgcapa2.png);
+                        background-repeat: repeat-x;
+                        background-size: contain;
+                        transform: rotateX(-180deg);
+                        z-index: 1;
+                    }
+
+                }
+
+                .carousel {
+                    z-index: 200;
+
+                    .row {
+                        z-index: 200;
+
+                        .img1,
+                        .img3 {
+                            position: relative;
+                            padding: 0px;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+                                background-color: rgba(0, 0, 0, 0.4);
+                                z-index: 1;
+                            }
+
+                            h2 {
+                                display: block;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: auto;
+                                color: white;
+                                font-family: @lora;
+                                font-style: italic;
+                                font-size: 22px;
+                                font-weight: 400;
+                                z-index: 100;
+
+                                p {
+                                    display: block;
+                                    color: #9dd9da;
+                                    font-family: @montserrat;
+                                    font-size: 26px;
+                                    font-weight: 900;
+                                }
+
+                                .fletxa {
+                                    display: block;
+                                    position: absolute;
+                                    font-size: 26px;
+                                }
+                            }
+                        }
+
+                        .img1 {
+                            background-image: url(imatges/imgthailand.jpg);
+
+                            .fletxa {
+                                top: 50%;
+                                left: 0%;
+                                transform: translate(-200%, -100%);
+                            }
+                        }
+
+                        .img3 {
+                            background-image: url(imatges/imgmaldives.jpg);
+
+                            h2 {
+                                text-align: right;
+                            }
+
+                            .fletxa {
+                                top: 50%;
+                                left: 100%;
+                                transform: translate(100%, -100%);
+                            }
+                        }
+
+                        .img2 {
+                            background-color: white;
+                            display: flex;
+                            position: relative;
+                            flex-direction: column;
+                            padding: 0px;
+                            padding-bottom: 25px;
+                            padding-top: 25px;
+                            z-index: 210;
+
+                            &:after {
+                                display: block;
+                                content: "";
+                                position: absolute;
+                                width: 100%;
+                                height: 130%;
+                                top: 0%;
+                                transform: translateY(-11%);
+                                background-color: white;
+                                z-index: -1;
+                            }
+
+                            .titol {
+                                margin: 0 auto;
+                                margin-top: 20px;
+                                text-align: center;
+
+                                .estrelles {
+                                    i {
+                                        color: #9cd9da;
+                                    }
+                                }
+
+                                h2 {
+                                    font-family: @montserrat;
+                                    font-weight: 900;
+                                    font-size: 40px;
+                                }
+
+                                span {
+                                    display: block;
+                                }
+
+                                p {
+                                    font-family: @lora;
+                                    font-weight: 700;
+                                    font-style: italic;
+                                    font-size: 18px;
+
+                                    i {
+                                        color: #9cd9da;
+                                    }
+                                }
+                            }
+
+                            .descripcio {
+                                font-family: @lora;
+                                font-size: 14px;
+                                font-weight: 700;
+                                font-style: italic;
+                                text-align: center;
+                                padding: 0px 75px;
+                            }
+
+                            .boto {
+                                background-color: #9cd9da;
+                                border: 1px solid #9cd9da;
+                                width: 20%;
+                                min-width: 160px;
+                                margin: 0 auto;
+                                border-radius: 50px;
+                                font-family: @montserrat;
+                                font-weight: 600;
+                                font-size: 14px;
+                                padding: 10px 0px;
+                            }
+
+                            .fletxes {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .seccio3_seccio4 {
+                background-image: url(imatges/imgs3s4.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                z-index: 1;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    z-index: 2;
+                }
+
+                .s3 {
+                    header {
+                        height: 350px;
+                        position: relative;
+                        z-index: 100;
+
+                        h1 {
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translateY(-50%);
+                            width: 25%;
+                            font-family: @montserrat;
+                            color: black;
+                            font-weight: 700;
+                            font-size: 50px;
+
+                            &:after,
+                            &:before {
+                                display: block;
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                right: 0%;
+                            }
+
+                            &:after {
+                                transform: translate(75%, -50%);
+                                background-color: black;
+                                width: 150px;
+                                height: 2px;
+                            }
+
+                            &:before {
+                                content: "step 3.";
+                                transform: translate(110%, -50%);
+                                color: #eaeaea;
+                                font-size: 64px;
+                                font-family: @montserrat;
+                                font-weight: 600;
+                            }
+
+                            span {
+                                font-family: @satisfy;
+                                font-size: 64px;
+                                color: #9bd8d9;
+                            }
+                        }
+                    }
+
+                    .palmeres_youtube {
+                        display: flex;
+                        flex-direction: column;
+                        z-index: 200;
+
+                        .palmeres {
+                            position: relative;
+                            height: 500px;
+                            width: 70%;
+                            margin: 0 auto;
+                            background-image: url(imatges/imgpalmeres.jpg);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            z-index: 210;
+
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+                                background-color: rgba(0, 0, 0, 0.3);
+                                z-index: -1;
+                            }
+
+                            .marc {
+                                width: 35%;
+                                margin: 0 auto;
+                                margin-top: 50px;
+                                min-width: 300px;
+                                border-top: 10px solid white;
+                                border-bottom: 10px solid white;
+                                position: relative;
+
+                                &:after,
+                                &:before {
+                                    display: block;
+                                    content: "";
+                                    position: absolute;
+                                    width: 100%;
+                                    left: 0%;
+                                    border-right: 10px solid white;
+                                    border-left: 10px solid white;
+                                }
+
+                                &:after {
+                                    bottom: 0%;
+                                    height: 60%;
+                                }
+
+                                &:before {
+                                    top: 0%;
+                                    left: 0%;
+                                    width: 100%;
+                                    height: 3%;
+                                }
+
+                                .summer {
+
+                                    h1 {
+                                        font-family: @satisfy;
+                                        font-size: 128px;
+                                        display: block;
+                                        position: relative;
+                                        width: 120%;
+                                        margin-top: 10px;
+                                        margin-left: -10%;
+                                        color: white;
+
+                                        span {
+                                            display: block;
+                                            text-align: center;
+                                            font-size: 32px;
+                                            margin-top: -20px;
+                                        }
+                                    }
+                                }
+
+                                .info {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+
+                                    .off {
+                                        width: 50%;
+                                        min-width: 135px;
+                                        min-height: 200px;
+                                        text-align: center;
+                                        margin: 0 auto;
+                                        margin-left: 3%;
+
+                                        p {
+                                            font-family: @montserrat;
+                                            color: #9bd8d9;
+                                            font-weight: 700;
+                                            font-size: 64px;
+
+                                            i {
+                                                display: block;
+                                                color: white;
+                                                margin-top: -35px;
+                                            }
+                                        }
+                                    }
+
+                                    .divboto {
+                                        width: 50%;
+                                        margin: 0 auto;
+                                        margin-right: 3%;
+
+                                        .boto {
+                                            background-color: #9cd9da;
+                                            border: 1px solid #9cd9da;
+                                            min-width: 120px;
+                                            display: block;
+                                            margin: 0 auto;
+                                            border-radius: 25px;
+                                            font-family: @montserrat;
+                                            font-weight: 600;
+                                            font-size: 16px;
+                                            padding: 10px 0px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .hashtag {
+                                display: block;
+                                position: absolute;
+                                bottom: -5%;
+                                left: 0%;
+                                font-family: @montserrat;
+                                font-size: 12px;
+                                font-weight: 600;
+                                letter-spacing: -1px;
+                            }
+                        }
+
+                        .youtube {
+                            height: 450px;
+                            width: 35%;
+                            margin: 0 auto;
+                            margin-top: -100px;
+                            position: relative;
+                            background-image: url(imatges/imgyoutube.jpg);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            z-index: 300;
+
+                            i {
+                                display: block;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                font-size: 64px;
+                                color: #cf1312;
+                            }
+                        }
+                    }
+                }
+
+                .s4 {
+                    header {
+                        height: 250px;
+                        position: relative;
+                        z-index: 100;
+
+                        h1 {
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 35%;
+                            font-family: @montserrat;
+                            color: black;
+                            font-weight: 700;
+                            font-size: 40px;
+
+                            &:after,
+                            &:before {
+                                display: block;
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                left: 0%;
+                            }
+
+                            &:after {
+                                transform: translate(-110%, -50%);
+                                background-color: black;
+                                width: 150px;
+                                height: 2px;
+                            }
+
+                            &:before {
+                                content: "step 4.";
+                                transform: translate(-110%, -50%);
+                                color: #e0e0e0;
+                                font-size: 64px;
+                                font-family: @montserrat;
+                                font-weight: 600;
+                            }
+
+                            span {
+                                font-family: @satisfy;
+                                font-size: 50px;
+                                color: #9bd8d9;
+                            }
+                        }
+                    }
+
+                    .carousel2 {
+
+                        position: relative;
+                        z-index: 250;
+                        background-color: transparent;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        &:after {
+                            display: block;
+                            content: "";
+                            position: absolute;
+                            height: 50%;
+                            width: 100%;
+                            top: 50%;
+                            left: 0%;
+                            background-color: #FFFDFE;
+                            z-index: -1;
+                        }
+
+                        div {
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            position: relative;
+                            z-index: 250;
+
+                            .marc {
+                                display: block;
+                                z-index: 250;
+                                position: absolute;
+                                width: 80%;
+                                height: 90%;
+                                top: 50%;
+                                left: 50%;
+                                border: 10px solid white;
+                                transform: translate(-50%, -50%);
+
+                                &:after,
+                                &:before {
+                                    display: block;
+                                    content: "";
+                                    position: absolute;
+                                }
+
+                                span {
+                                    display: block;
+                                    position: absolute;
+                                    font-family: @montserrat;
+                                    font-size: 64px;
+                                    font-weight: 700;
+                                    color: white;
+                                }
+                            }
+                        }
+
+                        .petita {
+                            height: 600px;
+                            width: 10%;
+                        }
+
+                        .mitjana {
+                            height: 700px;
+                            width: 15%;
+                        }
+
+                        .gran {
+                            height: 850px;
+                            width: 50%;
+                        }
+
+                        .i1 {
+                            background-image: url(imatges/imgmitjana2.jpg);
+                            background-position: 40% 50%;
+
+                            .marc {
+                                border-top: 0px;
+
+                                &:after {
+                                    right: 0%;
+                                    top: 0%;
+                                    width: 50%;
+                                    height: 100%;
+                                    border-top: 10px solid white;
+                                }
+
+                                &:before {
+                                    left: 0%;
+                                    top: 0%;
+                                    width: 5%;
+                                    height: 100%;
+                                    border-top: 10px solid white;
+                                }
+
+                                span {
+                                    top: 0%;
+                                    left: 25%;
+                                    transform: translate(-40%, -50%);
+                                }
+                            }
+                        }
+
+                        .i2 {
+                            background-image: url(imatges/imgmitjana1.jpg);
+
+                            .marc {
+                                border-right: 0px;
+
+                                &:after {
+                                    top: 0%;
+                                    border-right: 10px solid white;
+                                    width: 100%;
+                                    height: 43%;
+                                }
+
+                                &:before {
+                                    bottom: 0%;
+                                    border-right: 10px solid white;
+                                    width: 100%;
+                                    height: 43%;
+                                }
+
+                                span {
+                                    top: 50%;
+                                    right: 0%;
+                                    transform: translate(40%, -50%);
+                                }
+
+                            }
+                        }
+
+                        .i3 {
+                            background-image: url(imatges/imggran1.jpg);
+
+                            .marc {
+                                border-bottom: 0px;
+
+                                &:after {
+                                    top: 0%;
+                                    left: 0%;
+                                    border-bottom: 10px solid white;
+                                    width: 83%;
+                                    height: 100%;
+                                }
+
+                                &:before {
+                                    top: 0%;
+                                    right: 0%;
+                                    border-bottom: 10px solid white;
+                                    width: 5%;
+                                    height: 100%;
+                                }
+
+                                span {
+                                    bottom: 0%;
+                                    right: 10%;
+                                    transform: translate(50%, 40%);
+                                }
+
+                            }
+                        }
+
+                        .i4 {
+                            background-image: url(imatges/imgmitjana7.jpg);
+                            background-position: 40% 50%;
+
+                            .marc {
+                                border-left: 0px;
+
+                                &:after {
+                                    top: 0%;
+                                    border-left: 10px solid white;
+                                    width: 100%;
+                                    height: 18%;
+                                }
+
+                                &:before {
+                                    bottom: 0%;
+                                    border-left: 10px solid white;
+                                    width: 100%;
+                                    height: 68%;
+                                }
+
+                                span {
+                                    top: 25%;
+                                    left: 0%;
+                                    transform: translate(-40%, -50%);
+                                }
+
+                            }
+                        }
+
+                        .i5 {
+                            background-image: url(imatges/imgmitjana4.jpg);
+                            background-position: 50% 50%;
+                            overflow: hidden;
+
+                            .marc {
+                                border-right: 0px;
+
+                                &:after {
+                                    top: 0%;
+                                    border-right: 10px solid white;
+                                    width: 100%;
+                                    height: 83%;
+                                }
+
+                                &:before {
+                                    bottom: 0%;
+                                    border-right: 10px solid white;
+                                    width: 100%;
+                                    height: 3%;
+                                }
+
+                                span {
+                                    top: 90%;
+                                    right: 0%;
+                                    transform: translate(25%, -50%);
+                                }
+                            }
+                        }
+
+
+                    }
+
+                    .share {
+                        position: relative;
+                        z-index: 250;
+                        height: 150px;
+                        display: flex;
+                        align-items: center;
+                        background-color: #FFFDFE;
+
+                        div {
+                            width: 15%;
+                            margin: 0 auto;
+                            display: flex;
+                            flex-direction: row;
+                            position: relative;
+
+                            span {
+                                display: block;
+                                bottom: 0%;
+                                font-family: @montserrat;
+                                font-size: 18px;
+                                font-weight: 900;
+                                line-height: 43px;
+                            }
+
+                            i {
+                                display: block;
+                                font-size: 32px;
+                                margin: auto 10px;
+
+                                &:nth-child(2) {
+                                    margin-left: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .secciofinal {
+                position: relative;
+
+                header {
+                    height: 100px;
+                    position: relative;
+                    z-index: 100;
+
+                    h1 {
+                        display: block;
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        transform: translate(-25%, -50%);
+                        width: 35%;
+                        font-family: @montserrat;
+                        color: black;
+                        font-weight: 700;
+                        font-size: 64px;
+                        z-index: 10;
+
+                        &:after,
+                        &:before {
+                            display: block;
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 0%;
+                        }
+
+                        &:after {
+                            transform: translate(-110%, -50%);
+                            background-color: black;
+                            width: 150px;
+                            height: 2px;
+                        }
+
+                        &:before {
+                            content: "final";
+                            transform: translate(-175%, -50%);
+                            color: #e0e0e0;
+                            font-size: 64px;
+                            font-family: @montserrat;
+                            font-weight: 600;
+                        }
+
+                        span {
+                            font-family: @satisfy;
+                            font-size: 64px;
+                            color: #9bd8d9;
+                        }
+                    }
+
+                    .pinzellades_top {
+                        position: absolute;
+                        bottom: 0%;
+                        width: 100%;
+                        height: 142px;
+                        background-image: url(imatges/imgcapa2.png);
+                        background-repeat: repeat-x;
+                        background-size: contain;
+                        transform: translateY(100%) rotateX(-180deg);
+                        z-index: 1;
+                    }
+                }
+
+                .productes {
+                    height: 95vh;
+                    position: relative;
+                    width: 100%;
+                    background-image: url(imatges/imgproductes1.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    min-width: 160px * 6;
+
+                    .articles {
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: stretch;
+                        position: absolute;
+                        top: 20%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        flex-direction: row;
+                        width: 75%;
+                        height: 50%;
+                        min-width: 160px * 6;
+
+                        article {
+                            width: 20%;
+                            margin: 0px 10px;
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            min-width: 20%;
+                            background-color: #f5f5f3;
+                            height: 100%;
+                            min-width: 160px;
+
+                            h1 {
+                                padding: 20px 0px;
+                                font-family: @montserrat;
+                                font-size: 18px;
+                                font-weight: 700;
+                                text-align: center;
+                                letter-spacing: -1px;
+                            }
+
+                            figure {
+                                display: flex;
+                                align-items: center;
+                                margin: 0 auto;
+                                height: 200px;
+                                width: 100%;
+                                overflow: hidden;
+
+                                img {
+                                    max-width: 100%;
+                                    max-height: 100%;
+                                    margin: 0 auto;
+                                }
+                            }
+
+                            .boto {
+                                background-color: #9cd9da;
+                                border: 1px solid #9cd9da;
+                                min-width: 160px;
+                                display: block;
+                                margin: 25px auto;
+                                border-radius: 25px;
+                                font-family: @montserrat;
+                                font-weight: 600;
+                                font-size: 16px;
+                                padding: 10px 20px;
+                            }
+
+                            .seleccionat {
+                                background-color: white;
+                                color: #9cd9da;
+                            }
+
+                            .seleccio_boletes {
+                                display: none;
+                            }
+                        }
+                    }
+
+                }
+
+                .pinzellades_bot {
+                    position: absolute;
+                    bottom: 0%;
+                    width: 100%;
+                    height: 142px;
+                    background-image: url(imatges/imgcapa2.png);
+                    background-repeat: repeat-x;
+                    background-size: contain;
+                    transform: translateY(0%);
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}
+
+
+////***** BREAKPOINTS *****+////
+
+
+@media (max-width: 575.98px) {
+
+    html {
+        body {
+            min-width: 0px;
+
+            //header
+            .imatge {
+
+                .menu_collapsed {
+                    display: block;
+                    position: absolute;
+                    top: 5%;
+                    left: 5%;
+                    width: 30px;
+                    height: 30px;
+
+                    .barretes {
+                        margin-bottom: 5px;
+                        width: 100%;
+                        height: 5px;
+                        background-color: white;
+                        border-radius: 15px;
+                    }
+                }
+
+                nav,
+                .info,
+                .xarxes,
+                .opcions {
+                    display: none;
+                }
+
+                .insydneytrip {
+                    top: 55%;
+                    left: 5%;
+                    width: 90%;
+
+                    .sydney {
+                        font-size: 40px;
+                    }
+
+                    .boto {
+                        margin: 0 auto;
+                        width: 75%;
+                    }
+                }
+
+                .chill {
+                    .img {
+                        width: 100px;
+                        height: 100px;
+                    }
+
+                    .chilling {
+                        font-size: 50px;
+                    }
+                }
+
+                .pinzellades {
+                    background-size: cover;
+                }
+            }
+
+            //main
+            .principal {
+
+                .seccio1 {
+                    .swim {
+                        width: 100%;
+                        margin: 0 auto;
+
+                        .tourhotel {
+                            margin: 0 auto;
+                        }
+
+                        .imatge_mar {
+                            display: none;
+                        }
+
+                        .trip {
+
+                            position: relative;
+                            width: 90%;
+                            transform: translate(0%, 0%);
+                            margin: 0 auto;
+                            margin-top: 35px;
+
+                            .where {
+
+                                .fons {
+
+                                    .inputs {
+                                        div {
+                                            width: 90%;
+
+                                            input {
+                                                width: 95%;
+                                            }
+                                        }
+                                    }
+
+                                    .boto_search {
+                                        width: 80%;
+                                        padding: 10px;
+                                    }
+
+                                    p {
+                                        display: none;
+                                    }
+
+                                    .guionet {
+
+                                        &:before {
+                                            transform: translateX(-100%);
+                                            width: 80px;
+                                            height: 2px;
+                                            background-color: white;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .textet {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .seccio2 {
+
+                    header {
+                        h1 {
+
+                            p {
+                                margin-top: 65px;
+                            }
+
+                            &:after {
+                                display: none;
+                            }
+
+                            .step2 {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .main {
+                        .pinzellades {
+                            background-size: cover;
+                        }
+                    }
+
+                    .carousel {
+                        .row {
+                            background-color: #eff0f4;
+
+                            .img2 {
+                                width: 90%;
+                                margin: 0 auto;
+                                padding-bottom: 0px;
+
+                                &:after {
+                                    transform: translateY(-15%);
+                                }
+
+                                .fletxes {
+                                    display: block;
+                                    margin: 0 auto;
+                                    margin-top: 25px;
+
+                                    span {
+                                        font-size: 26px;
+                                        color: #eeeeee;
+
+                                        &:nth-child(1) {
+                                            margin-right: 25px;
+                                            color: #ade0e1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .seccio3_seccio4 {
+
+                    .s3 {
+                        header {
+                            h1 {
+                                position: relative;
+                                width: 70%;
+                                margin: 0 auto;
+                                left: 0%;
+
+                                &:after {
+                                    transform: translate(35%, -50%);
+                                    width: 100px;
+                                    height: 3px;
+                                }
+
+                                &:before {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        .palmeres_youtube {
+                            .palmeres {
+                                width: 90%;
+
+                                .hashtag {
+                                    display: none;
+                                }
+                            }
+
+                            .youtube {
+                                width: 70%;
+                            }
+                        }
+                    }
+
+                    .s4 {
+
+                        header {
+                            h1 {
+
+                                &:after {
+                                    transform: translate(-150%, -50%);
+                                    width: 100px;
+                                    height: 3px;
+                                }
+
+                                &:before {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        .carousel2 {
+
+                            overflow: hidden;
+
+                            div {
+                                .marc {
+                                    border: 5px solid white;
+
+                                    span {
+                                        font-size: 28px;
+                                    }
+                                }
+                            }
+
+                            .petita {
+                                display: none;
+                                width: 0%;
+                            }
+
+                            .mitjana {
+                                height: 350px;
+                                width: 15%;
+
+                            }
+
+                            .gran {
+                                height: 450px;
+                                width: 90%;
+                            }
+
+                            .i2 {
+                                margin-left: -3%;
+
+                                .marc {
+
+                                    &:after,
+                                    &:before {
+                                        border-right: 5px solid white;
+                                    }
+                                }
+                            }
+
+                            .i3 {
+                                .marc {
+
+                                    &:after,
+                                    &:before {
+                                        border-bottom: 5px solid white;
+                                    }
+                                }
+                            }
+
+                            .i4 {
+                                margin-right: -3%;
+
+                                .marc {
+
+                                    &:after,
+                                    &:before {
+                                        border-left: 5px solid white;
+                                    }
+                                }
+                            }
+                        }
+
+                        .share {
+                            div {
+                                width: 40%;
+                            }
+                        }
+                    }
+                }
+
+                .secciofinal {
+                    header {
+                        h1 {
+                            position: relative;
+                            margin: 0 auto;
+                            width: 50%;
+                            left: 0%;
+                            transform: translate(0%, -50%);
+
+                            &:after {
+                                transform: translate(-110%, -50%);
+                                width: 100px;
+                                height: 3px;
+                            }
+
+                            &:before {
+                                display: none;
+                            }
+                        }
+
+                        .pinzellades_top {
+                            background-size: cover;
+                        }
+                    }
+
+                    .productes {
+                        min-width: 0px;
+
+                        .articles {
+                            min-width: 0px;
+                            position: relative;
+                            top: 15%;
+                            height: 70%;
+                            width: 100%;
+                            flex-direction: column;
+                            align-items: stretch;
+
+                            article {
+                                display: none;
+                                width: 90%;
+                                height: 100%;
+                                margin: 0 auto;
+
+                                h1 {
+                                    padding: 0px;
+                                    height: 20%;
+                                    line-height: 113px;
+                                    font-weight: 900;
+                                    letter-spacing: 0.5px;
+                                }
+
+                                figure {
+                                    height: 60%;
+                                }
+
+                                .boto {}
+
+                                &:nth-child(1) {
+                                    display: block;
+                                }
+                            }
+
+                            .seleccio_boletes {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                width: 90%;
+                                margin: 0 auto;
+                                min-height: 50px;
+
+                                .bola {
+                                    width: 15px;
+                                    height: 15px;
+                                    border-radius: 50%;
+                                    background-color: #cbcbcd;
+
+                                    margin-right: 15px;
+                                }
+
+                                .selected {
+                                    background-color: #9cd9de;
+                                }
+                            }
+                        }
+                    }
+
+                    .pinzellades_bot {
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+    }
+}

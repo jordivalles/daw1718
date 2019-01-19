@@ -1,0 +1,362 @@
+@montserrat: 'Montserrat', sans-serif;
+@satisfy: 'Satisfy', sans-serif;
+@lora: 'Lora', serif;
+
+html {
+    height: 100%;
+
+    body {
+        background-color: #FFFDFE;
+        height: 100%;
+
+        //footer
+        .footer {
+
+            .footer_imgs {
+                margin-top: 5%;
+                display: flex;
+                flex-direction: row;
+                position: relative;
+
+                div {
+                    width: 100%/6;
+                    height: 200px;
+                    overflow: hidden;
+                    object-fit: cover;
+
+                    img {
+                        width: 100%;
+                        min-height: 100%;
+                    }
+                }
+
+                .insta {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: rgba(255, 255, 255, 0.6);
+                    padding: 15px 35px;
+                    border-radius: 50px;
+
+                    .insta_text {
+                        margin-left: 5px;
+                        font-family: @montserrat;
+                        font-weight: 600;
+                        font-size: 14px;
+                    }
+                }
+
+            }
+
+            .contact {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+                background-color: #222222;
+                padding: 30px 0px;
+                align-items: center;
+
+                span {
+                    display: block;
+                    min-width: 150px;
+                    width: 10%;
+                    font-family: @montserrat;
+                    font-size: 18px;
+                    color: white;
+                    line-height: 38px;
+                    margin-right: 15px;
+                }
+
+                .input_text {
+                    position: relative;
+                    width: 40%;
+
+                    .mail {
+                        display: block;
+                        position: relative;
+                        width: 100%;
+                        border-radius: 25px;
+                        padding: 10px 0px;
+                        background-color: #656565;
+                        border: 1px solid #656565;
+                    }
+
+                    ::placeholder {
+                        font-family: @montserrat;
+                        font-size: 12px;
+                        color: #cccccc;
+                        padding-left: 15px;
+                    }
+
+                    .boto {
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        right: 0%;
+                        width: 15%;
+                        min-width: 100px;
+                        transform: translate(-5%, -50%);
+                        border-radius: 25px;
+                        font-family: @montserrat;
+                        font-size: 14px;
+                        padding: 0px 10px;
+                        background-color: #9cd9da;
+                        border: 1px solid #9cd9da;
+                        color: white;
+                        height: 25px;
+                    }
+                }
+            }
+
+            .footer_footer {
+
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+
+                &:after {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    background-image: url(imatges/imgfooter3.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    transform: scale(1.1);
+                    z-index: -1;
+                    background-color: rgba(0, 0, 0, 0.4);
+                    -webkit-filter: blur(5px);
+                    -moz-filter: blur(5px);
+                    -o-filter: blur(5px);
+                    -ms-filter: blur(5px);
+                    filter: blur(5px);
+                }
+
+                .header {
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto;
+                    width: 20%;
+                    min-width: 275px;
+                    padding-top: 20px;
+                    z-index: 10;
+
+                    .h1 {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        margin: 0 auto;
+                        height: 175px;
+                        width: 100%;
+                        min-width: 325px;
+                        overflow: hidden;
+                        position: relative;
+
+                        img {
+                            width: 150px;
+                            height: 150px;
+                            transform: rotate(25deg);
+                            margin-right: -25px;
+                            margin-bottom: 35px;
+                        }
+
+                        .chilling {
+                            display: block;
+                            font-family: @satisfy;
+                            font-size: 90px;
+                            color: white;
+                            padding: 50px 0px;
+                            text-align: center;
+                        }
+                    }
+
+                    .textet {
+                        display: block;
+                        width: 100%;
+                        font-family: @satisfy;
+                        font-size: 20px;
+                        text-align: center;
+                        color: white;
+                    }
+
+                    .xarxes {
+                        margin-top: 50px;
+
+                        i {
+                            margin-right: 15px;
+                            color: white;
+                        }
+
+                        .fa-twitter {
+                            color: #76dffc;
+                        }
+
+                        .fa-basketball-ball {
+                            margin-right: 0px;
+                        }
+                    }
+                }
+
+                .support {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: stretch;
+                    margin: 0 auto;
+                    width: 60%;
+                    margin-top: 50px;
+                    padding: 25px 0px;
+                    z-index: 10;
+
+                    div {
+                        position: relative;
+                        width: 17%;
+                        margin-left: 15px;
+                        min-width: 125px;
+
+                        i {
+                            color: #a8b1b6;
+                            font-size: 32px;
+                            display: block;
+                            text-align: center;
+                            padding: 10px 0px;
+                        }
+
+                        span {
+                            display: block;
+                            font-family: @lora;
+                            font-weight: 400;
+                            font-style: italic;
+                            font-size: 14px;
+                            text-align: center;
+                            color: #a8b1b6;
+                            padding: 5px 0px;
+                        }
+
+                        p {
+                            font-family: @montserrat;
+                            font-weight: 600;
+                            font-size: 16px;
+                            color: white;
+                            text-align: center;
+                            padding: 5px 0px;
+                        }
+                    }
+
+                    .telf {
+                        margin-left: 0px;
+                    }
+
+                    .fa-skype {
+                        color: #00abf3;
+                    }
+                }
+
+                .CR {
+                    margin: 0 auto;
+                    width: 60%;
+                    border-top: 1px solid white;
+                    padding: 25px 0px;
+                    text-align: center;
+                    color: white;
+                    font-family: @montserrat;
+                    font-weight: 600;
+                    z-index: 10;
+
+                    span {
+                        color: #9dd8dc;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+////***** BREAKPOINTS *****+////
+
+
+@media (max-width: 575.98px) {
+
+    html {
+        body {
+
+            .footer {
+                .footer_imgs {
+                    flex-wrap: wrap;
+
+                    div {
+                        width: 50%;
+                    }
+                }
+
+                .contact {
+                    flex-wrap: wrap;
+
+                    span {
+                        width: 100%;
+                        text-align: center;
+                    }
+
+                    .input_text {
+                        width: 75%;
+                        margin: 15px 0px;
+                    }
+                }
+
+                .footer_footer {
+
+                    .header {
+                        width: 90%;
+
+                        .h1 {
+                            min-width: 0px;
+                            width: 40%;
+                            height: 150px;
+
+                            img {
+                                width: 100px;
+                                height: 100px;
+                            }
+
+                            .chilling {
+                                font-size: 32px;
+                            }
+                        }
+                    }
+
+                    .support {
+                        flex-direction: column;
+
+                        div {
+                            width: 90%;
+                            margin: 0 auto;
+                            margin-left: 0px;
+                        }
+                    }
+
+                    .CR {
+                        width: 80%;
+
+                        .linia1 {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
