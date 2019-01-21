@@ -6,7 +6,7 @@ html {
     height: 100%;
 
     body {
-        background-color: #faf8f9;
+        background-color: #faf8f9 !important;
         height: 100%;
 
         .guionet {
@@ -241,12 +241,12 @@ html {
             .seccio1 {
                 display: flex;
                 flex-direction: row;
-                width: 70%;
+                width: 80%;
                 margin: 0 auto;
                 margin-top: 4%;
 
                 .filtres {
-                    width: 30%;
+                    width: 35%;
 
 
                     h1 {
@@ -279,7 +279,8 @@ html {
                         input {
                             width: 100%;
                             border-radius: 10px;
-                            border: 0px;
+                            border: 1px solid #f3f1f2;
+                            background-color: #faf8f9;
                         }
 
                         ::placeholder {
@@ -294,8 +295,9 @@ html {
 
                         input {
                             border-radius: 25px;
-                            border: 0px;
                             width: 100%;
+                            border: 1px solid #f3f1f2;
+                            background-color: #faf8f9;
                         }
 
                         i {
@@ -348,6 +350,7 @@ html {
                                     i {
                                         float: left;
                                         color: #9dd7d9;
+                                        margin-left: 3px;
                                     }
                                 }
 
@@ -378,6 +381,75 @@ html {
 
                     .preu {
                         padding: 25px 0px;
+                        padding-bottom: 40px;
+
+                        .barra_grisa {
+                            position: relative;
+                            width: 100%;
+                            height: 5px;
+                            background-color: #edebec;
+
+                            .barra_blava {
+                                display: block;
+                                position: absolute;
+                                top: 50%;
+                                left: 40%;
+                                transform: translate(-40%, -50%);
+                                width: 40%;
+                                height: 5px;
+                                background-color: #9cd9da;
+
+                                .bola {
+                                    position: absolute;
+                                    width: 15px;
+                                    height: 15px;
+                                    border-radius: 50%;
+                                    background-color: #2a6466;
+                                    top: 50%;
+
+                                    &:after {
+                                        display: block;
+                                        position: absolute;
+                                        top: 100%;
+                                        left: 0%;
+                                        transform: translate(-50%, 100%);
+                                        font-family: @montserrat;
+                                        font-weight: 700;
+                                        font-size: 14px;
+                                    }
+
+                                }
+
+                                .bola1 {
+                                    left: 0%;
+
+                                    transform: translate(-50%, -50%);
+
+                                    &:after {
+                                        content: "$100";
+                                    }
+                                }
+
+                                .bola2 {
+                                    left: 100%;
+                                    transform: translate(-50%, -50%);
+
+                                    &:after {
+                                        content: "$500";
+                                    }
+                                }
+
+                                i {
+                                    display: block;
+                                    position: absolute;
+                                    color: #9cd9da;
+                                    font-size: 44px;
+                                    top: 100%;
+                                    left: 0%;
+                                    transform: translate(-50%, 15%) rotate(180deg);
+                                }
+                            }
+                        }
                     }
 
                     .tipus {
@@ -422,8 +494,8 @@ html {
                             border-radius: 25px;
                             background-color: #2a6466;
                             padding: 5px;
-                            width: 30%;
-
+                            width: 40%;
+                            min-width: 40%;
                             font-family: @montserrat;
                             font-weight: 600;
                         }
@@ -433,7 +505,7 @@ html {
 
                 .resultats {
                     margin-left: 1%;
-                    width: 70%;
+                    width: 60%;
 
                     header {
                         width: 100%;
@@ -466,6 +538,7 @@ html {
                                 border-radius: 25px;
                                 text-align: center;
                                 position: relative;
+                                margin-left: 2px;
 
                                 p {
                                     width: 100%;
@@ -673,8 +746,8 @@ html {
                                 border-radius: 25px;
                                 background-color: #9cd9da;
                                 padding: 5px;
-                                width: 50%;
-
+                                width: 70%;
+                                min-width: 70%;
                                 font-family: @montserrat;
                                 font-weight: 600;
                             }
@@ -805,6 +878,179 @@ html {
 @media (max-width: 575.98px) {
 
     html {
-        body {}
+        body {
+
+            //header
+            .imatge {
+
+                .menu_collapsed {
+                    display: block;
+                    position: absolute;
+                    top: 5%;
+                    left: 5%;
+                    width: 30px;
+                    height: 30px;
+
+                    .barretes {
+                        margin-bottom: 5px;
+                        width: 100%;
+                        height: 5px;
+                        background-color: white;
+                        border-radius: 15px;
+                    }
+                }
+
+                .header {
+
+                    .info {
+                        display: none;
+                    }
+
+                    .menu {
+                        display: none;
+                    }
+
+                    .chill {
+                        width: 100%;
+
+                        .grup {
+                            width: 50%;
+                            justify-content: center;
+                            align-items: stretch;
+
+                            img {
+                                width: 75px;
+                                height: 75px;
+                                margin-right: -20px;
+                            }
+
+                            .chilling {
+                                padding: 0px 0px;
+                                font-size: 64px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .main {
+                .seccio1 {
+                    flex-direction: column-reverse;
+                    width: 90%;
+
+                    .resultats {
+                        width: 100%;
+                        margin-left: 0px;
+
+                        header {
+                            .filterby > div {
+                                display: none;
+                            }
+
+                            .filterby {
+                                width: 100%;
+                                justify-content: flex-start;
+                                min-width: 0px;
+                            }
+
+                            .display {
+                                display: none;
+                            }
+                        }
+
+                        article {
+                            flex-direction: column;
+
+                            figure {
+                                width: 100%;
+                            }
+
+                            .desc {
+                                margin-left: 0px;
+                                width: 100%;
+                            }
+
+                            .reservar {
+                                margin-left: 0px;
+                                margin-top: 10px;
+                                width: 100%;
+
+                                .boto {
+                                    width: 100%;
+                                }
+
+                            }
+                        }
+
+                        .pagines {
+                            padding: 40px 0px;
+
+                            .row {
+                                width: 50%;
+                            }
+                        }
+                    }
+
+                    .filtres {
+                        width: 100%;
+
+                        .cercador_dates {
+                            .row {
+
+                                input {
+                                    margin-top: 25px;
+                                }
+
+                                .cto {
+                                    margin-top: 25px;
+                                }
+                            }
+                        }
+
+                        .rating {
+                            .puntuacions {
+                                .row > div {
+                                    width: 50%;
+                                }
+                            }
+                        }
+
+                        .tipus {
+                            .propietats {
+
+                                .row > div {
+                                    width: 50%;
+                                    margin-top: 10px;
+                                }
+
+                                .last {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                        }
+
+                        .boto_cerca {
+                            .boto {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .seccio2 {
+                    margin-top: 75px;
+                    width: 90%;
+
+                    .contingut {
+                        flex-direction: column;
+
+                        article {
+                            width: 100%;
+                            margin-top: 25px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

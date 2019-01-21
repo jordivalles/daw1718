@@ -3,7 +3,7 @@ html {
   height: 100%;
 }
 html body {
-  background-color: #faf8f9;
+  background-color: #faf8f9 !important;
   height: 100%;
 }
 html body .guionet:before {
@@ -198,12 +198,12 @@ html body .imatge .search_results h1 {
 html body .main .seccio1 {
   display: flex;
   flex-direction: row;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   margin-top: 4%;
 }
 html body .main .seccio1 .filtres {
-  width: 30%;
+  width: 35%;
 }
 html body .main .seccio1 .filtres h1 {
   font-family: 'Montserrat', sans-serif;
@@ -232,7 +232,8 @@ html body .main .seccio1 .filtres .cercador_city i {
 html body .main .seccio1 .filtres .cercador_city input {
   width: 100%;
   border-radius: 10px;
-  border: 0px;
+  border: 1px solid #f3f1f2;
+  background-color: #faf8f9;
 }
 html body .main .seccio1 .filtres .cercador_city ::placeholder {
   padding-left: 35px;
@@ -244,8 +245,9 @@ html body .main .seccio1 .filtres .cercador_dates {
 }
 html body .main .seccio1 .filtres .cercador_dates input {
   border-radius: 25px;
-  border: 0px;
   width: 100%;
+  border: 1px solid #f3f1f2;
+  background-color: #faf8f9;
 }
 html body .main .seccio1 .filtres .cercador_dates i {
   display: block;
@@ -288,6 +290,7 @@ html body .main .seccio1 .filtres .rating .puntuacions .row div {
 html body .main .seccio1 .filtres .rating .puntuacions .row div i {
   float: left;
   color: #9dd7d9;
+  margin-left: 3px;
 }
 html body .main .seccio1 .filtres .rating .puntuacions .row .radio {
   float: left;
@@ -311,6 +314,64 @@ html body .main .seccio1 .filtres .rating .puntuacions .row .radio i {
 }
 html body .main .seccio1 .filtres .preu {
   padding: 25px 0px;
+  padding-bottom: 40px;
+}
+html body .main .seccio1 .filtres .preu .barra_grisa {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background-color: #edebec;
+}
+html body .main .seccio1 .filtres .preu .barra_grisa .barra_blava {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-40%, -50%);
+  width: 40%;
+  height: 5px;
+  background-color: #9cd9da;
+}
+html body .main .seccio1 .filtres .preu .barra_grisa .barra_blava .bola {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #2a6466;
+  top: 50%;
+}
+html body .main .seccio1 .filtres .preu .barra_grisa .barra_blava .bola:after {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  transform: translate(-50%, 100%);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+html body .main .seccio1 .filtres .preu .barra_grisa .barra_blava .bola1 {
+  left: 0%;
+  transform: translate(-50%, -50%);
+}
+html body .main .seccio1 .filtres .preu .barra_grisa .barra_blava .bola1:after {
+  content: "$100";
+}
+html body .main .seccio1 .filtres .preu .barra_grisa .barra_blava .bola2 {
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+html body .main .seccio1 .filtres .preu .barra_grisa .barra_blava .bola2:after {
+  content: "$500";
+}
+html body .main .seccio1 .filtres .preu .barra_grisa .barra_blava i {
+  display: block;
+  position: absolute;
+  color: #9cd9da;
+  font-size: 44px;
+  top: 100%;
+  left: 0%;
+  transform: translate(-50%, 15%) rotate(180deg);
 }
 html body .main .seccio1 .filtres .tipus {
   padding: 25px 0px;
@@ -348,13 +409,14 @@ html body .main .seccio1 .filtres .boto_cerca .boto {
   border-radius: 25px;
   background-color: #2a6466;
   padding: 5px;
-  width: 30%;
+  width: 40%;
+  min-width: 40%;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 html body .main .seccio1 .resultats {
   margin-left: 1%;
-  width: 70%;
+  width: 60%;
 }
 html body .main .seccio1 .resultats header {
   width: 100%;
@@ -386,6 +448,7 @@ html body .main .seccio1 .resultats header .filterby div {
   border-radius: 25px;
   text-align: center;
   position: relative;
+  margin-left: 2px;
 }
 html body .main .seccio1 .resultats header .filterby div p {
   width: 100%;
@@ -560,7 +623,8 @@ html body .main .seccio1 .resultats article .reservar .boto {
   border-radius: 25px;
   background-color: #9cd9da;
   padding: 5px;
-  width: 50%;
+  width: 70%;
+  min-width: 70%;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
@@ -652,4 +716,120 @@ html body .main .seccio2 .contingut article main p {
 }
 html body .main .seccio2 .contingut article main p i {
   font-size: 32px;
+}
+@media (max-width: 575.98px) {
+  html body .imatge .menu_collapsed {
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 30px;
+    height: 30px;
+  }
+  html body .imatge .menu_collapsed .barretes {
+    margin-bottom: 5px;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    border-radius: 15px;
+  }
+  html body .imatge .header .info {
+    display: none;
+  }
+  html body .imatge .header .menu {
+    display: none;
+  }
+  html body .imatge .header .chill {
+    width: 100%;
+  }
+  html body .imatge .header .chill .grup {
+    width: 50%;
+    justify-content: center;
+    align-items: stretch;
+  }
+  html body .imatge .header .chill .grup img {
+    width: 75px;
+    height: 75px;
+    margin-right: -20px;
+  }
+  html body .imatge .header .chill .grup .chilling {
+    padding: 0px 0px;
+    font-size: 64px;
+  }
+  html body .main .seccio1 {
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+  html body .main .seccio1 .resultats {
+    width: 100%;
+    margin-left: 0px;
+  }
+  html body .main .seccio1 .resultats header .filterby > div {
+    display: none;
+  }
+  html body .main .seccio1 .resultats header .filterby {
+    width: 100%;
+    justify-content: flex-start;
+    min-width: 0px;
+  }
+  html body .main .seccio1 .resultats header .display {
+    display: none;
+  }
+  html body .main .seccio1 .resultats article {
+    flex-direction: column;
+  }
+  html body .main .seccio1 .resultats article figure {
+    width: 100%;
+  }
+  html body .main .seccio1 .resultats article .desc {
+    margin-left: 0px;
+    width: 100%;
+  }
+  html body .main .seccio1 .resultats article .reservar {
+    margin-left: 0px;
+    margin-top: 10px;
+    width: 100%;
+  }
+  html body .main .seccio1 .resultats article .reservar .boto {
+    width: 100%;
+  }
+  html body .main .seccio1 .resultats .pagines {
+    padding: 40px 0px;
+  }
+  html body .main .seccio1 .resultats .pagines .row {
+    width: 50%;
+  }
+  html body .main .seccio1 .filtres {
+    width: 100%;
+  }
+  html body .main .seccio1 .filtres .cercador_dates .row input {
+    margin-top: 25px;
+  }
+  html body .main .seccio1 .filtres .cercador_dates .row .cto {
+    margin-top: 25px;
+  }
+  html body .main .seccio1 .filtres .rating .puntuacions .row > div {
+    width: 50%;
+  }
+  html body .main .seccio1 .filtres .tipus .propietats .row > div {
+    width: 50%;
+    margin-top: 10px;
+  }
+  html body .main .seccio1 .filtres .tipus .propietats .last {
+    margin-bottom: 10px;
+  }
+  html body .main .seccio1 .filtres .boto_cerca .boto {
+    width: 100%;
+  }
+  html body .main .seccio2 {
+    margin-top: 75px;
+    width: 90%;
+  }
+  html body .main .seccio2 .contingut {
+    flex-direction: column;
+  }
+  html body .main .seccio2 .contingut article {
+    width: 100%;
+    margin-top: 25px;
+  }
 }
