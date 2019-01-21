@@ -2,7 +2,7 @@
 <html lang="ca-ES">
 
 <head>
-    <title>Pràctica 5</title>
+    <title>Search Results</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <link rel="stylesheet" type="text/css" href="reset.css" />
     <link rel="stylesheet" type="text/css" href="search.css" />
@@ -18,6 +18,387 @@
 </head>
 
 <body>
+
+    <header class="imatge">
+        <div class="menu_collapsed">
+            <div class="barretes"></div>
+            <div class="barretes"></div>
+            <div class="barretes"></div>
+        </div>
+        <div class="header">
+            <div class="info">
+                <p class="guionet">info@travel.com<span>call : +44 3245321</span></p>
+
+            </div>
+            <div class="chill">
+                <div class="grup">
+                    <img src="imatges/imgavioc.png" />
+                    <p class="chilling">hlling</p>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="buscador">
+                    <input type="text" class="search" />
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="opcions">
+                    <div class="icones">
+                        <i class="fas fa-shopping-basket numero"></i>
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+                <div class="desplegable">
+                    <div class="menu_collapsed2">
+                        <div class="barretes"></div>
+                        <div class="barretes"></div>
+                        <div class="barretes"></div>
+                    </div>
+                    <span>MENU</span>
+                </div>
+            </div>
+        </div>
+        <div class="search_results">
+            <p>Home / <i>Tour</i></p>
+            <h1>SEARCH RESULTS</h1>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="seccio1">
+            <div class="filtres">
+                <h1>Search for Tours</h1>
+                <div class="cercador_city">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" class="city" placeholder="City or Country Zip Code" />
+                </div>
+                <div class="cercador_dates">
+                    <div class="row">
+                        <div class="cfrom col-sm-6">
+                            <h2>From</h2>
+                            <div class="cercador_from">
+                                <i class="far fa-calendar-alt"></i>
+                                <input type="text" class="data" placeholder="Nov 10, Tue" />
+                            </div>
+                        </div>
+                        <div class="cto col-sm-6">
+                            <h2>To</h2>
+                            <div class="cercador_to">
+                                <i class="far fa-calendar-alt"></i>
+                                <input type="text" class="data" placeholder="Nov 10, Tue" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="guests">
+                    <h2>Guests</h2>
+                    <div class="num_persones row">
+                        <i>1</i>
+                        <i class="selected">2</i>
+                        <i>3</i>
+                        <i>4</i>
+                        <i>4+</i>
+                    </div>
+                </div>
+                <div class="rating">
+                    <div class="puntuacions">
+                        <h2>By rating</h2>
+                        <div class="row">
+                            <div class="p1 col-sm-6">
+                                <div class="radio">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="p2 col-sm-6">
+                                <div class="radio"></div>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="p3 col-sm-6">
+                                <div class="radio"></div>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="p4 col-sm-6">
+                                <div class="radio"></div>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="preu">
+                    <h2>Price</h2>
+                    <input type="range" class="custom-range" min="0" max="700" step="0.5" id="customRange3">
+                </div>
+                <div class="tipus">
+                    <h2>Property type</h2>
+                    <div class="propietats">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="radio"></div><i>Sea</i>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="radio"></div><i>Forest</i>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="radio"></div><i>Beach</i>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="radio"></div><i>Hunting</i>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="radio"></div><i>Mountain</i>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="radio"></div><i>Charming</i>
+                            </div>
+                        </div>
+                        <div class="radio">
+                            <p class="fas fa-check"></p>
+                        </div><i>Resort</i>
+                    </div>
+                </div>
+                <div class="boto_cerca">
+                    <button type="button" class="btn btn-primary boto">Search</button>
+                </div>
+            </div>
+            <div class="resultats">
+                <header>
+                    <div class="filterby">
+                        <span>Filter by: </span>
+                        <div class="f_destination">
+                            <p>Destination</p>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <div class="f_sort_order">
+                            <p>Sort order</p>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <div class="f_rate">
+                            <p>Rate</p>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <div class="f_price">
+                            <p>Price</p>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                    </div>
+                    <div class="display">
+                        <span>Display: </span>
+                        <div class="d3x3">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="d2x3">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="d2x2">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+
+                </header>
+                <article>
+                    <figure><img src="imatges/imgmaldives2.jpg" /></figure>
+                    <div class="desc">
+                        <span class="lloc">New York</span>
+                        <h2>GURAIHOO</h2>
+                        <div class="estrelles">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="reviews">(20 reviews)</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipsicing elit et risus faucibus, cursus tristique ultices</p>
+                        <span class="latest_booking">Latest booking: Nov 3, 2017</span>
+                    </div>
+                    <div class="reservar">
+                        <p> <i class="from">from</i> <i class="preu">$230</i> / 1 week</p>
+                        <button type="button" class="btn btn-primary boto">Book now</button>
+                    </div>
+                </article>
+                <article>
+                    <figure><img src="imatges/imgproductes1.jpg" /></figure>
+                    <div class="desc">
+                        <span class="lloc">France</span>
+                        <h2>BORA BORA</h2>
+                        <div class="estrelles">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="reviews">(20 reviews)</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipsicing elit et risus faucibus, cursus tristique ultices</p>
+                        <span class="latest_booking">Latest booking: Nov 3, 2017</span>
+                    </div>
+                    <div class="reservar">
+                        <p> <i class="from">from</i> <i class="preu">$230</i> / 3 days 2 nights</p>
+                        <button type="button" class="btn btn-primary boto">Book now</button>
+                    </div>
+                </article>
+                <article>
+                    <figure><img src="imatges/imgbarca.jpg" /></figure>
+                    <div class="desc">
+                        <span class="lloc">Thailand</span>
+                        <h2>PHUKET</h2>
+                        <div class="estrelles">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="reviews">(20 reviews)</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipsicing elit et risus faucibus, cursus tristique ultices</p>
+                        <span class="latest_booking">Latest booking: Nov 3, 2017</span>
+                    </div>
+                    <div class="reservar">
+                        <p> <i class="from">from</i> <i class="preu">$356</i> / 4 days 3 nights</p>
+                        <button type="button" class="btn btn-primary boto">Book now</button>
+                    </div>
+                </article>
+                <article>
+                    <figure><img src="imatges/imgmitjana2.jpg" /></figure>
+                    <div class="desc">
+                        <span class="lloc">Philippines</span>
+                        <h2>BORACAY ISLAND</h2>
+                        <div class="estrelles">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="reviews">(20 reviews)</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipsicing elit et risus faucibus, cursus tristique ultices</p>
+                        <span class="latest_booking">Latest booking: Nov 3, 2017</span>
+                    </div>
+                    <div class="reservar">
+                        <p> <i class="from">from</i> <i class="preu">$420</i> / 1 week</p>
+                        <button type="button" class="btn btn-primary boto">Book now</button>
+                    </div>
+                </article>
+                <article>
+                    <figure><img src="imatges/imgmountain.jpg" /></figure>
+                    <div class="desc">
+                        <span class="lloc">Miami</span>
+                        <h2>MIAMI ISLAND</h2>
+                        <div class="estrelles">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="reviews">(20 reviews)</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipsicing elit et risus faucibus, cursus tristique ultices</p>
+                        <span class="latest_booking">Latest booking: Nov 3, 2017</span>
+                    </div>
+                    <div class="reservar">
+                        <p> <i class="from">from</i> <i class="preu">$420</i> / 1 week</p>
+                        <button type="button" class="btn btn-primary boto">Search</button>
+                    </div>
+                </article>
+                <footer>
+                    <div class="pagines">
+                        <div class="num_pagines row">
+                            <i>1</i>
+                            <i class="selected">2</i>
+                            <i>3</i>
+                            <i>4</i>
+                            <span class="fas fa-long-arrow-alt-right"></span>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </section>
+        <section class="seccio2">
+            <header>
+                <p>YOU MAY <i>Like</i></p>
+            </header>
+            <div class="contingut">
+                <article class="a1">
+                    <figure>
+                        <img src="imatges/imgmaldives2.jpg" />
+                    </figure>
+                    <main>
+                        <span>Malaysia</span>
+                        <h2>LANGKAWI</h2>
+                        <p> from <i>$120</i> / 3 days</p>
+                        <div class="estrelles">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipsicing elit et risus faucibus, cursus tristique ultices</p>
+                    </main>
+                </article>
+                <article class="a2">
+                    <figure>
+                        <img src="imatges/imgriver.jpg" />
+                    </figure>
+                    <main>
+                        <span>Netherland</span>
+                        <h2>CARIBBEAN</h2>
+                        <p> from <i>$299</i> / 4 days</p>
+                        <div class="estrelles">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipsicing elit et risus faucibus, cursus tristique ultices</p>
+                    </main>
+                </article>
+                <article class="a3">
+                    <figure>
+                        <img src="imatges/imgbarca.jpg" />
+                    </figure>
+                    <main>
+                        <span>Thailand</span>
+                        <h2>KOH LIPE</h2>
+                        <p> from <i>$192</i> / 3 days</p>
+                        <div class="estrelles">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipsicing elit et risus faucibus, cursus tristique ultices</p>
+                    </main>
+                </article>
+            </div>
+        </section>
+    </main>
 
 </body>
 

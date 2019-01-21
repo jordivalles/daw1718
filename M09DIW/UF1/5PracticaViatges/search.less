@@ -6,8 +6,795 @@ html {
     height: 100%;
 
     body {
-        background-color: #FFFDFE;
+        background-color: #faf8f9;
         height: 100%;
+
+        .guionet {
+
+            &:before {
+                display: block;
+                content: "";
+                position: absolute;
+                top: 25%;
+                left: 0%;
+                transform: translate(-150%, -50%);
+                width: 30px;
+                height: 2px;
+                background-color: white;
+            }
+        }
+
+        //header
+        .imatge {
+            position: relative;
+            height: 60vh;
+            width: 100%;
+            background-image: url(imatges/imgmountain.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+
+            &:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.4);
+                z-index: 1;
+            }
+
+            .menu_collapsed {
+                display: none;
+                z-index: 10;
+            }
+
+            .header {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                z-index: 10;
+
+                .info {
+                    width: 15%;
+                    position: relative;
+
+                    p,
+                    span {
+                        display: block;
+                        color: white;
+                        font-family: @montserrat;
+                        font-size: 10px;
+                        font-weight: bold;
+                    }
+
+                    p {
+                        top: 15%;
+                        left: 30%;
+                        position: absolute;
+                    }
+                }
+
+                .chill {
+                    width: 40%;
+                    margin-left: 7%;
+
+                    .grup {
+                        font-family: @satisfy;
+                        font-size: 64px;
+                        color: white;
+
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        margin: 0 auto;
+                        //height: 175px;
+                        width: 40%;
+                        min-width: 325px;
+                        overflow: hidden;
+
+                        img {
+                            width: 150px;
+                            height: 150px;
+                            transform: rotate(25deg);
+                            margin-right: -25px;
+                            margin-bottom: 35px;
+                        }
+
+                        .chilling {
+                            display: block;
+                            font-family: @satisfy;
+                            font-size: 90px;
+                            color: white;
+                            padding: 50px 0px;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .menu {
+                    width: 25%;
+                    margin-top: 1.5%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+
+                    .buscador {
+                        width: 50%;
+
+                        .search {
+                            width: 90%;
+                            border-radius: 25px;
+                            border: 0px;
+                            background-color: rgba(255, 255, 255, 0.3);
+                        }
+
+                        i {
+                            transform: translateX(-300%);
+                            color: whitesmoke;
+                            font-size: 10px;
+                        }
+                    }
+
+                    .opcions {
+                        width: 25%;
+
+                        .icones {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-evenly;
+                            margin: 0 auto;
+                            color: white;
+                            width: 100%;
+
+                            i {
+                                display: block;
+                                position: relative;
+                                font-size: 22px;
+                            }
+
+                            .numero {
+                                &:after {
+                                    position: absolute;
+                                    content: "0";
+                                    top: 0%;
+                                    left: 0%;
+                                    transform: translate(-50%, -50%);
+                                    width: 13px;
+                                    height: 13px;
+                                    font-size: 10px;
+                                    text-align: center;
+                                    line-height: 13px;
+                                    border-radius: 50%;
+                                    background-color: #A8D9DD;
+                                }
+                            }
+                        }
+                    }
+
+                    .desplegable {
+                        width: 25%;
+                        display: flex;
+                        flex-direction: row;
+
+                        .menu_collapsed2 {
+                            width: 20px;
+                            height: 30px;
+
+                            .barretes {
+                                margin-top: 3px;
+                                width: 100%;
+                                height: 3px;
+                                background-color: white;
+                                border-radius: 25px;
+                            }
+
+                        }
+
+                        span {
+                            color: white;
+                            margin-left: 10px;
+                            font-family: @montserrat;
+                            font-weight: 600;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            .search_results {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, 0%);
+                text-align: center;
+                color: white;
+                z-index: 10;
+
+                p {
+                    font-family: @lora;
+                    font-style: italic;
+                    font-weight: 700;
+                    font-size: 20px;
+
+                    i {
+                        color: #9cd8d9;
+                    }
+                }
+
+                h1 {
+                    font-family: @montserrat;
+                    font-weight: 700;
+                    letter-spacing: -7px;
+                    font-size: 64px;
+                }
+            }
+        }
+
+        //main
+        .main {
+
+            .seccio1 {
+                display: flex;
+                flex-direction: row;
+                width: 70%;
+                margin: 0 auto;
+                margin-top: 4%;
+
+                .filtres {
+                    width: 30%;
+
+
+                    h1 {
+                        font-family: @montserrat;
+                        font-weight: 600;
+                        font-size: 32px;
+                    }
+
+                    h2 {
+                        font-family: @lora;
+                        font-weight: 700;
+                        font-style: italic;
+                        font-size: 18px;
+                    }
+
+                    .cercador_city {
+                        position: relative;
+                        color: #b0aaaa;
+                        padding: 25px 0px;
+
+                        i {
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            left: 15px;
+                            transform: translateY(-50%);
+                            font-size: 12px;
+                        }
+
+                        input {
+                            width: 100%;
+                            border-radius: 10px;
+                            border: 0px;
+                        }
+
+                        ::placeholder {
+                            padding-left: 35px;
+                            color: #b0aaaa;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .cercador_dates {
+                        padding: 25px 0px;
+
+                        input {
+                            border-radius: 25px;
+                            border: 0px;
+                            width: 100%;
+                        }
+
+                        i {
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            left: 25px;
+                            transform: translateY(75%);
+                            color: #b0aaaa;
+                            font-size: 12px;
+                        }
+
+                        ::placeholder {
+                            padding: 5px 0px 5px 30px;
+                            color: #b0aaaa;
+                            font-size: 14px;
+                        }
+
+                    }
+
+                    .guests {
+                        padding: 25px 0px;
+
+                        i {
+                            display: block;
+                            width: 25px;
+                            height: 25px;
+                            text-align: center;
+                            color: #b0aaaa;
+                            font-size: 18px;
+                            font-family: @montserrat;
+                            font-weight: 600;
+                            margin-left: 5px;
+                        }
+
+                        .selected {
+                            border-radius: 50%;
+                            background-color: #9cd9da;
+                        }
+                    }
+
+                    .rating {
+                        padding: 25px 0px;
+
+                        .puntuacions {
+                            .row {
+                                div {
+                                    margin: 5px 0px;
+
+                                    i {
+                                        float: left;
+                                        color: #9dd7d9;
+                                    }
+                                }
+
+                                .radio {
+                                    float: left;
+                                    width: 13px;
+                                    height: 13px;
+                                    background-color: white;
+                                    border-radius: 50%;
+                                    margin-right: 10px;
+                                    margin-top: 3px;
+                                    border: 1px solid #b0aaaa;
+                                    position: relative;
+
+                                    i {
+                                        display: block;
+                                        position: absolute;
+                                        top: 0%;
+                                        left: 50%;
+                                        transform: translate(-50%, -25%);
+                                        color: #9dd9da;
+                                        float: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .preu {
+                        padding: 25px 0px;
+                    }
+
+                    .tipus {
+                        padding: 25px 0px;
+
+                        .propietats {
+                            i {
+                                font-family: @montserrat;
+                                font-weight: 400;
+                                color: #b0aaaa;
+                            }
+
+                            .radio {
+                                float: left;
+                                width: 13px;
+                                height: 13px;
+                                background-color: white;
+                                border-radius: 50%;
+                                margin-right: 10px;
+                                margin-top: 5px;
+                                border: 1px solid #b0aaaa;
+                                position: relative;
+
+                                p {
+                                    display: block;
+                                    position: absolute;
+                                    top: 0%;
+                                    left: 50%;
+                                    transform: translate(-50%, -25%);
+                                    color: #9dd9da;
+                                    float: none;
+                                }
+                            }
+                        }
+                    }
+
+                    .boto_cerca {
+                        padding: 25px 0px;
+
+                        .boto {
+                            border: 0px;
+                            border-radius: 25px;
+                            background-color: #2a6466;
+                            padding: 5px;
+                            width: 30%;
+
+                            font-family: @montserrat;
+                            font-weight: 600;
+                        }
+                    }
+
+                }
+
+                .resultats {
+                    margin-left: 1%;
+                    width: 70%;
+
+                    header {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        .filterby {
+                            width: 60%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+                            align-items: center;
+                            min-width: 450px;
+
+                            span {
+                                font-family: @montserrat;
+                                font-size: 16px;
+                                font-weight: 600;
+                                line-height: 40px;
+                            }
+
+                            div {
+                                display: flex;
+                                flex-direction: row;
+                                width: 25%;
+                                height: 40px;
+                                line-height: 40px;
+                                background-color: #9cd9da;
+                                border-radius: 25px;
+                                text-align: center;
+                                position: relative;
+
+                                p {
+                                    width: 100%;
+                                    font-family: @lora;
+                                    font-weight: 700;
+                                    font-style: italic;
+                                }
+
+                                i {
+                                    display: block;
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 5%;
+                                    transform: translateY(-50%);
+                                }
+                            }
+
+                            .f_rate,
+                            .f_price {
+                                width: 15%;
+                            }
+                        }
+
+                        .display {
+                            width: 30%;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+
+                            div > div {
+                                border-top-left-radius: 1px;
+                                border-bottom-left-radius: 1px;
+                                border-top-right-radius: 1px;
+                                border-bottom-right-radius: 1px;
+                            }
+
+                            span {
+                                font-family: @montserrat;
+                                font-size: 16px;
+                                font-weight: 600;
+                                line-height: 40px;
+                            }
+
+                            .d3x3 {
+                                margin-left: 20px;
+                                width: 30px;
+                                min-width: 30px;
+                                height: 30px;
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                div {
+                                    background-color: #c9c7c8;
+                                    width: 5px;
+                                    height: 5px;
+                                    margin-right: 5px;
+
+                                    &:nth-child(3n) {
+                                        margin-right: 0px;
+                                    }
+                                }
+                            }
+
+                            .d2x3 {
+                                margin-left: 20px;
+                                width: 30px;
+                                min-width: 30px;
+                                height: 30px;
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                div {
+                                    background-color: #c9c7c8;
+
+                                    &:nth-child(1),
+                                    &:nth-child(3),
+                                    &:nth-child(5) {
+                                        margin-left: 4px;
+                                        width: 6px;
+                                        height: 7px;
+                                    }
+
+                                    &:nth-child(2),
+                                    &:nth-child(4),
+                                    &:nth-child(6) {
+                                        margin-right: 4px;
+                                        width: 12px;
+                                        height: 7px;
+                                    }
+                                }
+                            }
+
+                            .d2x2 {
+                                margin-left: 20px;
+                                width: 30px;
+                                min-width: 30px;
+                                height: 30px;
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                div {
+                                    background-color: #c9c7c8;
+                                    width: 10px;
+                                    height: 10px;
+                                    margin: 3px 2px 2px 3px;
+                                }
+                            }
+                        }
+
+                    }
+
+                    article {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: stretch;
+                        margin-top: 5%;
+
+                        figure {
+                            width: 35%;
+
+                            img {
+                                max-width: 100%;
+                                max-height: 100%;
+                                margin: 0 auto;
+                            }
+                        }
+
+                        .desc {
+                            width: 40%;
+                            margin-left: 10px;
+
+                            .lloc {
+                                font-family: @lora;
+                                font-weight: 700;
+                                font-style: italic;
+                                font-size: 16px;
+                                color: #9dd7d9;
+                            }
+
+                            h2 {
+                                font-family: @montserrat;
+                                font-weight: 700;
+                                font-size: 24px;
+                                letter-spacing: -1px;
+                            }
+
+                            .estrelles {
+                                i {
+                                    color: #9dd7d9;
+                                }
+                            }
+
+                            p {
+                                margin-top: 10px;
+                                font-family: @lora;
+                                font-size: 14px;
+                                font-weight: 700;
+                                font-style: italic;
+
+                                i {
+                                    font-size: 32px;
+                                }
+                            }
+
+                            .reviews,
+                            .latest_booking {
+                                font-family: @montserrat;
+                                font-weight: 400;
+                                font-size: 10px;
+                                color: #b0aaaa;
+                            }
+                        }
+
+                        .reservar {
+                            width: 25%;
+                            margin-left: 20px;
+
+                            p {
+                                font-family: @lora;
+                                font-size: 14px;
+                                font-weight: 700;
+                                font-style: italic;
+
+                                .from {
+                                    display: block;
+                                }
+
+                                .preu {
+                                    font-size: 32px;
+                                    color: #9cd9da;
+                                }
+                            }
+
+                            .boto {
+                                border: 0px;
+                                border-radius: 25px;
+                                background-color: #9cd9da;
+                                padding: 5px;
+                                width: 50%;
+
+                                font-family: @montserrat;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+
+                    .pagines {
+                        padding: 20px 0px;
+
+                        .row {
+                            margin: 0 auto;
+                            width: 25%;
+                        }
+
+                        i {
+                            display: block;
+                            width: 30px;
+                            height: 30px;
+                            text-align: center;
+                            line-height: 30px;
+                            color: black;
+                            font-size: 18px;
+                            font-family: @montserrat;
+                            font-weight: 600;
+                        }
+
+                        span {
+                            margin-left: 5px;
+                            text-align: center;
+                            line-height: 30px;
+                            font-size: 18px;
+                        }
+
+                        .selected {
+                            border-radius: 50%;
+                            background-color: #9cd9da;
+                        }
+                    }
+                }
+            }
+
+            .seccio2 {
+                display: block;
+                width: 70%;
+                margin: 0 auto;
+                margin-top: 5%;
+
+                header {
+                    text-align: center;
+
+                    p {
+                        font-family: @montserrat;
+                        font-weight: 700;
+                        font-size: 32px;
+                        letter-spacing: -1px;
+
+                        i {
+                            font-family: @satisfy;
+                            font-weight: lighter;
+                            font-size: 40px;
+                            color: #9bd8d9;
+                        }
+                    }
+                }
+
+                .contingut {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    article {
+                        width: 32%;
+
+                        figure {
+                            img {
+                                max-width: 100%;
+                                max-height: 100%;
+                                margin: 0 auto;
+                            }
+                        }
+
+                        main {
+                            text-align: center;
+
+                            span {
+                                font-family: @lora;
+                                font-weight: 700;
+                                font-style: italic;
+                                font-size: 16px;
+                                color: #9dd7d9;
+                            }
+
+                            h2 {
+                                font-family: @montserrat;
+                                font-weight: 700;
+                                font-size: 24px;
+                            }
+
+                            .estrelles {
+                                i {
+                                    color: #9dd7d9;
+                                }
+                            }
+
+                            p {
+                                font-family: @lora;
+                                font-size: 14px;
+                                font-weight: 700;
+                                font-style: italic;
+
+                                i {
+                                    font-size: 32px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }
 

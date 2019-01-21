@@ -3,6 +3,653 @@ html {
   height: 100%;
 }
 html body {
-  background-color: #FFFDFE;
+  background-color: #faf8f9;
   height: 100%;
+}
+html body .guionet:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 0%;
+  transform: translate(-150%, -50%);
+  width: 30px;
+  height: 2px;
+  background-color: white;
+}
+html body .imatge {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  background-image: url(imatges/imgmountain.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+html body .imatge:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+html body .imatge .menu_collapsed {
+  display: none;
+  z-index: 10;
+}
+html body .imatge .header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 10;
+}
+html body .imatge .header .info {
+  width: 15%;
+  position: relative;
+}
+html body .imatge .header .info p,
+html body .imatge .header .info span {
+  display: block;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+}
+html body .imatge .header .info p {
+  top: 15%;
+  left: 30%;
+  position: absolute;
+}
+html body .imatge .header .chill {
+  width: 40%;
+  margin-left: 7%;
+}
+html body .imatge .header .chill .grup {
+  font-family: 'Satisfy', sans-serif;
+  font-size: 64px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+  width: 40%;
+  min-width: 325px;
+  overflow: hidden;
+}
+html body .imatge .header .chill .grup img {
+  width: 150px;
+  height: 150px;
+  transform: rotate(25deg);
+  margin-right: -25px;
+  margin-bottom: 35px;
+}
+html body .imatge .header .chill .grup .chilling {
+  display: block;
+  font-family: 'Satisfy', sans-serif;
+  font-size: 90px;
+  color: white;
+  padding: 50px 0px;
+  text-align: center;
+}
+html body .imatge .header .menu {
+  width: 25%;
+  margin-top: 1.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+html body .imatge .header .menu .buscador {
+  width: 50%;
+}
+html body .imatge .header .menu .buscador .search {
+  width: 90%;
+  border-radius: 25px;
+  border: 0px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+html body .imatge .header .menu .buscador i {
+  transform: translateX(-300%);
+  color: whitesmoke;
+  font-size: 10px;
+}
+html body .imatge .header .menu .opcions {
+  width: 25%;
+}
+html body .imatge .header .menu .opcions .icones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  color: white;
+  width: 100%;
+}
+html body .imatge .header .menu .opcions .icones i {
+  display: block;
+  position: relative;
+  font-size: 22px;
+}
+html body .imatge .header .menu .opcions .icones .numero:after {
+  position: absolute;
+  content: "0";
+  top: 0%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
+  font-size: 10px;
+  text-align: center;
+  line-height: 13px;
+  border-radius: 50%;
+  background-color: #A8D9DD;
+}
+html body .imatge .header .menu .desplegable {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+}
+html body .imatge .header .menu .desplegable .menu_collapsed2 {
+  width: 20px;
+  height: 30px;
+}
+html body .imatge .header .menu .desplegable .menu_collapsed2 .barretes {
+  margin-top: 3px;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 25px;
+}
+html body .imatge .header .menu .desplegable span {
+  color: white;
+  margin-left: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+html body .imatge .search_results {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+  color: white;
+  z-index: 10;
+}
+html body .imatge .search_results p {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 20px;
+}
+html body .imatge .search_results p i {
+  color: #9cd8d9;
+}
+html body .imatge .search_results h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: -7px;
+  font-size: 64px;
+}
+html body .main .seccio1 {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 4%;
+}
+html body .main .seccio1 .filtres {
+  width: 30%;
+}
+html body .main .seccio1 .filtres h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+}
+html body .main .seccio1 .filtres h2 {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 18px;
+}
+html body .main .seccio1 .filtres .cercador_city {
+  position: relative;
+  color: #b0aaaa;
+  padding: 25px 0px;
+}
+html body .main .seccio1 .filtres .cercador_city i {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 12px;
+}
+html body .main .seccio1 .filtres .cercador_city input {
+  width: 100%;
+  border-radius: 10px;
+  border: 0px;
+}
+html body .main .seccio1 .filtres .cercador_city ::placeholder {
+  padding-left: 35px;
+  color: #b0aaaa;
+  font-size: 14px;
+}
+html body .main .seccio1 .filtres .cercador_dates {
+  padding: 25px 0px;
+}
+html body .main .seccio1 .filtres .cercador_dates input {
+  border-radius: 25px;
+  border: 0px;
+  width: 100%;
+}
+html body .main .seccio1 .filtres .cercador_dates i {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translateY(75%);
+  color: #b0aaaa;
+  font-size: 12px;
+}
+html body .main .seccio1 .filtres .cercador_dates ::placeholder {
+  padding: 5px 0px 5px 30px;
+  color: #b0aaaa;
+  font-size: 14px;
+}
+html body .main .seccio1 .filtres .guests {
+  padding: 25px 0px;
+}
+html body .main .seccio1 .filtres .guests i {
+  display: block;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  color: #b0aaaa;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin-left: 5px;
+}
+html body .main .seccio1 .filtres .guests .selected {
+  border-radius: 50%;
+  background-color: #9cd9da;
+}
+html body .main .seccio1 .filtres .rating {
+  padding: 25px 0px;
+}
+html body .main .seccio1 .filtres .rating .puntuacions .row div {
+  margin: 5px 0px;
+}
+html body .main .seccio1 .filtres .rating .puntuacions .row div i {
+  float: left;
+  color: #9dd7d9;
+}
+html body .main .seccio1 .filtres .rating .puntuacions .row .radio {
+  float: left;
+  width: 13px;
+  height: 13px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 3px;
+  border: 1px solid #b0aaaa;
+  position: relative;
+}
+html body .main .seccio1 .filtres .rating .puntuacions .row .radio i {
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  color: #9dd9da;
+  float: none;
+}
+html body .main .seccio1 .filtres .preu {
+  padding: 25px 0px;
+}
+html body .main .seccio1 .filtres .tipus {
+  padding: 25px 0px;
+}
+html body .main .seccio1 .filtres .tipus .propietats i {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #b0aaaa;
+}
+html body .main .seccio1 .filtres .tipus .propietats .radio {
+  float: left;
+  width: 13px;
+  height: 13px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 5px;
+  border: 1px solid #b0aaaa;
+  position: relative;
+}
+html body .main .seccio1 .filtres .tipus .propietats .radio p {
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  color: #9dd9da;
+  float: none;
+}
+html body .main .seccio1 .filtres .boto_cerca {
+  padding: 25px 0px;
+}
+html body .main .seccio1 .filtres .boto_cerca .boto {
+  border: 0px;
+  border-radius: 25px;
+  background-color: #2a6466;
+  padding: 5px;
+  width: 30%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+html body .main .seccio1 .resultats {
+  margin-left: 1%;
+  width: 70%;
+}
+html body .main .seccio1 .resultats header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+html body .main .seccio1 .resultats header .filterby {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 450px;
+}
+html body .main .seccio1 .resultats header .filterby span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 40px;
+}
+html body .main .seccio1 .resultats header .filterby div {
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #9cd9da;
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+}
+html body .main .seccio1 .resultats header .filterby div p {
+  width: 100%;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-style: italic;
+}
+html body .main .seccio1 .resultats header .filterby div i {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+}
+html body .main .seccio1 .resultats header .filterby .f_rate,
+html body .main .seccio1 .resultats header .filterby .f_price {
+  width: 15%;
+}
+html body .main .seccio1 .resultats header .display {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+html body .main .seccio1 .resultats header .display div > div {
+  border-top-left-radius: 1px;
+  border-bottom-left-radius: 1px;
+  border-top-right-radius: 1px;
+  border-bottom-right-radius: 1px;
+}
+html body .main .seccio1 .resultats header .display span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 40px;
+}
+html body .main .seccio1 .resultats header .display .d3x3 {
+  margin-left: 20px;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+html body .main .seccio1 .resultats header .display .d3x3 div {
+  background-color: #c9c7c8;
+  width: 5px;
+  height: 5px;
+  margin-right: 5px;
+}
+html body .main .seccio1 .resultats header .display .d3x3 div:nth-child(3n) {
+  margin-right: 0px;
+}
+html body .main .seccio1 .resultats header .display .d2x3 {
+  margin-left: 20px;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+html body .main .seccio1 .resultats header .display .d2x3 div {
+  background-color: #c9c7c8;
+}
+html body .main .seccio1 .resultats header .display .d2x3 div:nth-child(1),
+html body .main .seccio1 .resultats header .display .d2x3 div:nth-child(3),
+html body .main .seccio1 .resultats header .display .d2x3 div:nth-child(5) {
+  margin-left: 4px;
+  width: 6px;
+  height: 7px;
+}
+html body .main .seccio1 .resultats header .display .d2x3 div:nth-child(2),
+html body .main .seccio1 .resultats header .display .d2x3 div:nth-child(4),
+html body .main .seccio1 .resultats header .display .d2x3 div:nth-child(6) {
+  margin-right: 4px;
+  width: 12px;
+  height: 7px;
+}
+html body .main .seccio1 .resultats header .display .d2x2 {
+  margin-left: 20px;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+html body .main .seccio1 .resultats header .display .d2x2 div {
+  background-color: #c9c7c8;
+  width: 10px;
+  height: 10px;
+  margin: 3px 2px 2px 3px;
+}
+html body .main .seccio1 .resultats article {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin-top: 5%;
+}
+html body .main .seccio1 .resultats article figure {
+  width: 35%;
+}
+html body .main .seccio1 .resultats article figure img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+html body .main .seccio1 .resultats article .desc {
+  width: 40%;
+  margin-left: 10px;
+}
+html body .main .seccio1 .resultats article .desc .lloc {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 16px;
+  color: #9dd7d9;
+}
+html body .main .seccio1 .resultats article .desc h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -1px;
+}
+html body .main .seccio1 .resultats article .desc .estrelles i {
+  color: #9dd7d9;
+}
+html body .main .seccio1 .resultats article .desc p {
+  margin-top: 10px;
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: italic;
+}
+html body .main .seccio1 .resultats article .desc p i {
+  font-size: 32px;
+}
+html body .main .seccio1 .resultats article .desc .reviews,
+html body .main .seccio1 .resultats article .desc .latest_booking {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  color: #b0aaaa;
+}
+html body .main .seccio1 .resultats article .reservar {
+  width: 25%;
+  margin-left: 20px;
+}
+html body .main .seccio1 .resultats article .reservar p {
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: italic;
+}
+html body .main .seccio1 .resultats article .reservar p .from {
+  display: block;
+}
+html body .main .seccio1 .resultats article .reservar p .preu {
+  font-size: 32px;
+  color: #9cd9da;
+}
+html body .main .seccio1 .resultats article .reservar .boto {
+  border: 0px;
+  border-radius: 25px;
+  background-color: #9cd9da;
+  padding: 5px;
+  width: 50%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+html body .main .seccio1 .resultats .pagines {
+  padding: 20px 0px;
+}
+html body .main .seccio1 .resultats .pagines .row {
+  margin: 0 auto;
+  width: 25%;
+}
+html body .main .seccio1 .resultats .pagines i {
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+html body .main .seccio1 .resultats .pagines span {
+  margin-left: 5px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 18px;
+}
+html body .main .seccio1 .resultats .pagines .selected {
+  border-radius: 50%;
+  background-color: #9cd9da;
+}
+html body .main .seccio2 {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+html body .main .seccio2 header {
+  text-align: center;
+}
+html body .main .seccio2 header p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+html body .main .seccio2 header p i {
+  font-family: 'Satisfy', sans-serif;
+  font-weight: lighter;
+  font-size: 40px;
+  color: #9bd8d9;
+}
+html body .main .seccio2 .contingut {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+html body .main .seccio2 .contingut article {
+  width: 32%;
+}
+html body .main .seccio2 .contingut article figure img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+html body .main .seccio2 .contingut article main {
+  text-align: center;
+}
+html body .main .seccio2 .contingut article main span {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 16px;
+  color: #9dd7d9;
+}
+html body .main .seccio2 .contingut article main h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+html body .main .seccio2 .contingut article main .estrelles i {
+  color: #9dd7d9;
+}
+html body .main .seccio2 .contingut article main p {
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: italic;
+}
+html body .main .seccio2 .contingut article main p i {
+  font-size: 32px;
 }
