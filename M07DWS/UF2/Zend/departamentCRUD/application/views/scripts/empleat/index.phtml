@@ -1,0 +1,23 @@
+<br /><br />
+<div id="view-content">
+<a href="<?php echo $this->url(array('controller'=>'Empleat','action'=>'guardar'));?>">Nou empleat</a>
+<br>
+<a href="<?php echo $this->url(array('controller'=>'Departament','action'=>'index'));?>">Enrere</a>
+<br>
+<hr>
+<br><br>
+    <table>
+    <?php foreach($this->emps as $emp) { ?>
+    <tr>
+        <td> <?php echo $emp['id']; ?></td>
+        <td> <?php echo $emp['nom']; ?></td>
+        <td> <?php echo $emp['dpt']; ?></td>
+        <td> <a href="<?php echo $this->url(array('controller'=>'Empleat','action'=>'modificar', 'id'=>$emp['id']));?>">Modifica</a></td>
+        <td> <a href="<?php echo $this->url(array('controller'=>'Empleat','action'=>'eliminar', 'id'=>$emp['id']));?>">Elimina</a></td>
+        
+    </tr>
+    <?php } ?>
+    </table>
+    <br>
+    
+</div>

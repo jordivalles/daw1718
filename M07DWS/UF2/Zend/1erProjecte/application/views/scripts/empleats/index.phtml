@@ -1,0 +1,12 @@
+<br /><br />
+<div id="view-content">
+    <table border="1px solid black">
+        <tr><th>id</th><th>Nom</th><th>Dept</th></tr>
+    <?php 
+        foreach ($this->emps as $emp){
+            echo "<tr><td>".$emp['empid']."</td><td>".$emp['empnom']."</td><td>".$emp['nom']."</td></tr>";
+        }
+    ?>
+    </table>
+    <a href="<?php echo $this->url(array('controller'=>'Login','action'=>'destroy'));?>">Destruir</a>
+</div>
