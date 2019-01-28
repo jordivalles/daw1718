@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html onmousemove="mouse(event)" onmousedown="mouseclick(true)" onmouseup="mouseclick(false)">
+
+<head>
+    <title>Exercici</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="estil.css" />
+</head>
+
+<body>
+
+    <main>
+        <div class="base">
+            <div id="cama1">
+                <div id="cama2">
+                    <div id="pinsa">
+                        <i></i>
+                        <i></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+    function mouse(event) {
+        var x = event.clientX;
+        var y = event.clientY;
+
+        var m = window.innerWidth / 2;
+        var angle1 = 90 * (x - m) / m;
+
+        var h = window.innerHeight / 2;
+        var angle2 = 90 * (x - h) / h;
+
+        cama1.style = "transform: translateX(-50%) rotate(" + (angle1) + "deg);";
+        cama2.style = "transform: rotate(" + (angle2) + "deg);";
+    }
+
+    function mouseclick(isUp) {
+
+        var dist = isUp ? "50%" : "10%";
+        //var dist = isUp ? "30%" : "10%";
+
+        document.querySelectorAll("i")[0].style = "left:" + dist;
+        document.querySelectorAll("i")[1].style = "right:" + dist;
+    }
+
+</script>
+
+</html>

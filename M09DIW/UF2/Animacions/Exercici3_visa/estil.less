@@ -1,0 +1,27 @@
+div {
+    width: 100px;
+    height: 100px;
+    //transform: rotateY(45deg);
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#face1 {
+    background-color: red;
+    transform: translateZ(-1px) rotateY(180deg);
+}
+
+#face2 {
+    background-color: aqua;
+}
+
+#card {
+    transition: transform 2s;
+    background-color: lime;
+}
+
+#card:hover {
+    transform: rotateY(360deg);
+}

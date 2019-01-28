@@ -1,0 +1,69 @@
+div,
+i {
+    background-color: aquamarine;
+    border: 1px solid black;
+}
+
+
+.base {
+    display: block;
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10%;
+    height: 2%;
+
+    #cama1,
+    #cama2 {
+        position: absolute;
+        height: 100px;
+        width: 15px;
+        transform-origin: center bottom;
+    }
+
+    #cama1 {
+        bottom: 50%;
+        left: 50%;
+        //transform: translateX(-50%);
+    }
+
+    #cama2 {
+        bottom: 100%;
+        left: -1px;
+    }
+
+    #cama1 {
+        transform: translateX(-50%) rotate(45deg);
+    }
+
+    #cama2 {
+        transform: rotate(45deg);
+    }
+
+    #pinsa {
+        position: absolute;
+        width: 400%;
+        height: 40px;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        i {
+            display: block;
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            bottom: 100%;
+            transition: left 0.2s, right 0.2s;
+        }
+
+        i:nth-child(1) {
+            left: 10%;
+        }
+
+        i:nth-child(2) {
+            right: 10%;
+        }
+    }
+}
