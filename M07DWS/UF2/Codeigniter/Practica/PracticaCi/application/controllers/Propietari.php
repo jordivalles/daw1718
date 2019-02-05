@@ -65,11 +65,22 @@ class Propietari extends CI_Controller {
 		$this->load->view('Propietari',$data);
 	}
     
-	public function generarCalendari(){
+	public function generarCalendari($id, $year = null, $month = null){
 		
 		//id del curs
-		$data['idcurs'] = $this->uri->segment('3');
-		
+		//$data['idcurs'] = $this->uri->segment('3');
+		//$data['idcurs'] = $id;
+        
+        $data['calendari'] = $this->ModelConsultes->generar($id,$year,$month);
+        
+        
+        
+        //tornem al menú del propietari
+		$data['id'] = $this->session->codiPropietari;
+        //cursos del propietari
+		$data['cursos'] = $this->ModelConsultes->getCursosPropietari($data);
+        
+		$this->load->view('Propietari',$data);
 		/*
 		$prefs = array(
 			'local_time'   => 'time()',
@@ -93,6 +104,7 @@ class Propietari extends CI_Controller {
 		echo $this->calendar->generate(2018, 12, $data);
 		*/
 		
+        /*
 		$prefs['template'] = '
 
 			{table_open}<table border="0" cellpadding="0" cellspacing="0">{/table_open}
@@ -114,11 +126,17 @@ class Propietari extends CI_Controller {
 			{cal_cell_start_today}<td>{/cal_cell_start_today}
 			{cal_cell_start_other}<td class="other-month">{/cal_cell_start_other}
 
-			{cal_cell_content}<a href="{content}">{day}</a>{/cal_cell_content}
-			{cal_cell_content_today}<div class="highlight"><a href="{content}">{day}</a></div>{/cal_cell_content_today}
+			{cal_cell_content}
+                <div class="day_num">{day}</div>
+                <div class="content">{content}</div>
+            {/cal_cell_content}
+			{cal_cell_content_today}
+                <div class="day_num highlight">{day}</div>
+                <div class="content">{content}</div>
+            {/cal_cell_content_today}
 
-			{cal_cell_no_content}{day}{/cal_cell_no_content}
-			{cal_cell_no_content_today}<div class="highlight">{day}</div>{/cal_cell_no_content_today}
+			{cal_cell_no_content}<div class="day_num">{day}</div>{/cal_cell_no_content}
+			{cal_cell_no_content_today}<div class="day_num highlight">{day}</div>{/cal_cell_no_content_today}
 
 			{cal_cell_blank}&nbsp;{/cal_cell_blank}
 
@@ -131,10 +149,9 @@ class Propietari extends CI_Controller {
 
 			{table_close}</table>{/table_close}
 		';
-
-		$this->load->library('calendar', $prefs);
-
-		echo $this->calendar->generate();
+        */
+        
+        
 	}
 	
 	public function eliminarReserva(){

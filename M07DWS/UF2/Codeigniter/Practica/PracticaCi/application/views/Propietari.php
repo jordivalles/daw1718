@@ -33,7 +33,7 @@
 		p{
 			font-size: 18px;
 		}
-		td{
+		.taula1 td{
 			width: 150px;
 		}
 		.out{
@@ -45,6 +45,25 @@
 		.alert{
 			margin-top: 20px;
 		}
+        table.calendar{
+            margin: auto;
+            border-collapse: collapse;            
+        }
+        .calendar .days td{
+            width: 80px;
+            height: 80px;
+            padding: 4px;
+            border: 1px solid black;
+            vertical-align: top;
+            background-color: #DEF;
+        }
+        .calendar .days td:hover{
+            background-color: #FFF;
+        }
+        .calendar .highlight{
+            font-weight: bold;
+            color: #00F;
+        }
 	</style>
 </head>  
 <body>
@@ -56,7 +75,7 @@
 		<?php
 			if(count($cursos)!=0){
 				
-				echo "<table border='1'>";
+				echo "<table border='1' class='taula1'>";
 				
 				echo "<tr><th>Id</th><th>Títol</th><th>Data d'inici</th><th>Hores totals</th><th>Hores setmanals</th><th>Estat</th></tr>";
 				
@@ -90,7 +109,13 @@
 				echo "<p class='alert alert-success'>".$exit."</p>";
 			}
 		?>
-	
+        
+        <?php
+			if(isset($calendari)){
+				echo $calendari;
+			}
+		?>
+        
 	</div>
 	
 	<a class="out" href="<?php echo site_url('Index/index'); ?>">Torna al menú principal</a>  
