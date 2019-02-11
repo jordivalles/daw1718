@@ -6,7 +6,8 @@ class Propietari extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->database();	
+		$this->load->database();
+		$this->load->helper('date');		
 	}
 
 	public function index()
@@ -56,22 +57,26 @@ class Propietari extends CI_Controller {
 		
 		$data['exit'] = "Els canvis s'han efectuat correctament.";
 		
+		redirect('Propietari/index','refresh');
+		/*
 		//un cop modificat tornem al menú del propietari
 		$data['id'] = $this->session->codiPropietari;
 		
         //cursos del propietari
 		$data['cursos'] = $this->ModelConsultes->getCursosPropietari($data);
 		
-		$this->load->view('Propietari',$data);
+		$this->load->view('Propietari',$data);*/
 	}
     
 	public function generarCalendari($id, $year = null, $month = null){
 		
 		//id del curs
 		//$data['idcurs'] = $this->uri->segment('3');
-		//$data['idcurs'] = $id;
+		$data['idcurs'] = $id;
         
-        $data['calendari'] = $this->ModelConsultes->generar($id,$year,$month);
+		$data['dades'] = $this->ModelConsultes->getDadesCurs($data);
+		
+        $data['calendari'] = $this->ModelConsultes->generar($id,$year,$month,$data['dades'][0]['datainici']);
         
         
         

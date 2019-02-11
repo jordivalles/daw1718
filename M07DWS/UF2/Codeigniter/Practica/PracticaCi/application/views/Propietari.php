@@ -47,11 +47,12 @@
 		}
         table.calendar{
             margin: auto;
+			margin-top: 50px;
             border-collapse: collapse;            
         }
         .calendar .days td{
-            width: 80px;
-            height: 80px;
+            width: 200px;
+            height: 100px;
             padding: 4px;
             border: 1px solid black;
             vertical-align: top;
@@ -64,6 +65,9 @@
             font-weight: bold;
             color: #00F;
         }
+		.titol, .dies{
+			text-align: center;
+		}
 	</style>
 </head>  
 <body>
