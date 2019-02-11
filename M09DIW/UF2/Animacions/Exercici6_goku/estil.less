@@ -1,0 +1,20 @@
+@w: 80px;
+@h: 74px;
+
+.sprite{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    width: @w;
+    height: @h;
+    overflow: hidden;
+    background-image: url(sprite.png);
+    //background-position-x: -6*@w;
+    
+    &:hover{
+        background-position-x: -7*@w;
+        transition: background-position-x 1s steps(7);
+    }
+}
